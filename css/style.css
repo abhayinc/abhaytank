@@ -8,12 +8,18 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
   /* Color Palette - Warm Sand & Charcoal */
-  --wp--preset--color--background-1: #FCFAF7; /* Light paper cream */
-  --wp--preset--color--background-2: #FFFFFF; /* Modal / Card clean white */
-  --wp--preset--color--foreground-1: #1C1917; /* Dark charcoal */
-  --wp--preset--color--foreground-2: #6E675F; /* Muted bronze gray */
-  --wp--preset--color--border: rgba(28, 25, 23, 0.08); /* Fine divider line */
-  --wp--preset--color--primary: #EAF2F8;     /* Soft blue highlight tint */
+  --wp--preset--color--background-1: #FCFAF7;
+  /* Light paper cream */
+  --wp--preset--color--background-2: #FFFFFF;
+  /* Modal / Card clean white */
+  --wp--preset--color--foreground-1: #1C1917;
+  /* Dark charcoal */
+  --wp--preset--color--foreground-2: #6E675F;
+  /* Muted bronze gray */
+  --wp--preset--color--border: rgba(28, 25, 23, 0.08);
+  /* Fine divider line */
+  --wp--preset--color--primary: #EAF2F8;
+  /* Soft blue highlight tint */
   --accent-text-blue: #2980B9;
 
   /* Spacings & Layout */
@@ -24,10 +30,14 @@
 }
 
 [data-theme="dark"] {
-  --wp--preset--color--background-1: #0F0E0D; /* Rich dark charcoal */
-  --wp--preset--color--background-2: #161514; /* Card base black */
-  --wp--preset--color--foreground-1: #FAF6F0; /* Muted soft white */
-  --wp--preset--color--foreground-2: #A19A91; /* Warm dark gray */
+  --wp--preset--color--background-1: #0F0E0D;
+  /* Rich dark charcoal */
+  --wp--preset--color--background-2: #161514;
+  /* Card base black */
+  --wp--preset--color--foreground-1: #FAF6F0;
+  /* Muted soft white */
+  --wp--preset--color--foreground-2: #A19A91;
+  /* Warm dark gray */
   --wp--preset--color--border: rgba(250, 246, 240, 0.08);
   --wp--preset--color--primary: #0F1826;
   --accent-text-blue: #5DADE2;
@@ -37,7 +47,9 @@
 /* ==========================================================================
    RESET & SYSTEM BASICS
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -45,7 +57,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%; /* 10px base */
+  font-size: 62.5%;
+  /* 10px base */
 }
 
 body {
@@ -68,9 +81,11 @@ a {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--wp--preset--color--background-1);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--wp--preset--color--border);
   border-radius: 3px;
@@ -87,8 +102,15 @@ a {
 }
 
 @keyframes slideUpFade {
-  from { opacity: 0; transform: translateY(16px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Theme Switcher Button */
@@ -202,6 +224,7 @@ a {
     flex-direction: column;
     gap: 3rem;
   }
+
   .hero-profile-img {
     width: 90px;
     height: 90px;
@@ -298,8 +321,15 @@ a {
 }
 
 @keyframes slideDownAccordion {
-  from { opacity: 0; transform: translateY(-4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .directory-content .inner-desc {
