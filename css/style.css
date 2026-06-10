@@ -8,17 +8,23 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
 
   /* Preset Colors (Ali's Exact Brand Presets) */
-  --wp--preset--color--background-1: #FAF6F0; /* Light warm cream */
-  --wp--preset--color--foreground-1: #2E2A25; /* Dark rich brown */
+  --wp--preset--color--background-1: #FAF6F0;
+  /* Light warm cream */
+  --wp--preset--color--foreground-1: #2E2A25;
+  /* Dark rich brown */
   --wp--preset--color--background-2: #EFEBE4;
   --wp--preset--color--foreground-2: #5E5852;
-  
+
   /* Palette Presets */
-  --wp--preset--color--primary: #EAF2F8;     /* Soft Blue highlight */
-  --wp--preset--color--secondary: #FDF2E9;   /* Soft Orange highlight */
-  --wp--preset--color--tertiary: #FEF9E7;    /* Soft Yellow highlight */
-  --wp--preset--color--accent: #F5EEF8;      /* Soft Purple highlight */
-  
+  --wp--preset--color--primary: #EAF2F8;
+  /* Soft Blue highlight */
+  --wp--preset--color--secondary: #FDF2E9;
+  /* Soft Orange highlight */
+  --wp--preset--color--tertiary: #FEF9E7;
+  /* Soft Yellow highlight */
+  --wp--preset--color--accent: #F5EEF8;
+  /* Soft Purple highlight */
+
   --accent-text-blue: #2980B9;
   --accent-text-orange: #D35400;
   --accent-text-yellow: #D4AC0D;
@@ -41,16 +47,22 @@
 
 [data-theme="dark"] {
   /* Dark Theme */
-  --wp--preset--color--background-1: #121110; /* Dark warm charcoal */
-  --wp--preset--color--foreground-1: #FAF6F0; /* Light warm cream */
+  --wp--preset--color--background-1: #121110;
+  /* Dark warm charcoal */
+  --wp--preset--color--foreground-1: #FAF6F0;
+  /* Light warm cream */
   --wp--preset--color--background-2: #1C1B1A;
   --wp--preset--color--foreground-2: #B0A8A0;
-  
+
   /* Palette Presets */
-  --wp--preset--color--primary: #0F1826;     /* Dark Blue highlight */
-  --wp--preset--color--secondary: #26160E;   /* Dark Orange highlight */
-  --wp--preset--color--tertiary: #241E0F;    /* Dark Yellow highlight */
-  --wp--preset--color--accent: #1D1026;      /* Dark Purple highlight */
+  --wp--preset--color--primary: #0F1826;
+  /* Dark Blue highlight */
+  --wp--preset--color--secondary: #26160E;
+  /* Dark Orange highlight */
+  --wp--preset--color--tertiary: #241E0F;
+  /* Dark Yellow highlight */
+  --wp--preset--color--accent: #1D1026;
+  /* Dark Purple highlight */
 
   --accent-text-blue: #5DADE2;
   --accent-text-orange: #EB984E;
@@ -66,7 +78,9 @@
 /* ==========================================================================
    RESET & SYSTEM BASICS
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -74,7 +88,8 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 62.5%; /* 10px base */
+  font-size: 62.5%;
+  /* 10px base */
 }
 
 body {
@@ -99,14 +114,17 @@ a {
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--wp--preset--color--background-1);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--wp--preset--color--background-2);
   border: 2px solid var(--wp--preset--color--background-1);
   border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--wp--preset--color--foreground-2);
 }
@@ -123,8 +141,15 @@ a {
 }
 
 @keyframes slideUpFade {
-  from { opacity: 0; transform: translateY(24px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -308,9 +333,11 @@ a {
     padding-right: 0;
     padding-bottom: 1.5rem;
   }
+
   [data-theme="dark"] .metric-item {
     border-bottom-color: rgba(250, 246, 240, 0.06);
   }
+
   .metric-item:last-child {
     border-bottom: none;
     padding-bottom: 0;
@@ -560,67 +587,161 @@ a {
 }
 
 /* ==========================================================================
-   CLICKABLE LIFT CARDS (Directory)
+   MINIMALIST ACCORDION DIRECTORY (UX Upgrade)
    ========================================================================== */
-.service-category {
-  margin-bottom: 6rem;
+.directory-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
 }
 
-.category-desc {
-  font-size: 1.6rem;
-  color: var(--wp--preset--color--foreground-2);
-  margin-bottom: 3.5rem;
+.directory-toggle {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-bottom: 1px solid rgba(46, 42, 37, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: none;
+  transition: var(--transition-normal);
+  margin-bottom: 0.6rem;
 }
 
-.bullet-list {
+[data-theme="dark"] .directory-toggle {
+  border-bottom-color: rgba(250, 246, 240, 0.08);
+}
+
+.directory-toggle:hover {
+  background-color: var(--wp--preset--color--background-2);
+  border-color: var(--wp--preset--color--background-2);
+}
+
+.directory-summary {
+  cursor: pointer;
+  padding: 2.5rem 3.5rem;
+  outline: none;
+  user-select: none;
   list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.directory-summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Left elements of details row */
+.directory-title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.directory-index {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--foreground-2);
+  opacity: 0.6;
+}
+
+.directory-title-text {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--foreground-1);
+}
+
+/* Right elements of details row */
+.directory-meta-wrap {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Chevron indicator */
+.directory-chevron {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: var(--wp--preset--color--foreground-2);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.directory-toggle[open] .directory-chevron {
+  transform: rotate(180deg);
+  stroke: var(--wp--preset--color--foreground-1);
+}
+
+.directory-toggle[open] {
+  background-color: var(--wp--preset--color--background-2);
+  border-color: var(--wp--preset--color--background-2);
+  box-shadow: var(--shadow-card);
+}
+
+/* Category descriptor */
+.category-desc {
+  font-size: 1.5rem;
+  color: var(--wp--preset--color--foreground-2);
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+/* Accordion expand container */
+.directory-content {
+  padding: 0 3rem 3rem 7.5rem;
+  animation: slideDownAccordion 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.directory-content .inner-desc {
+  font-size: 1.55rem;
+  color: var(--wp--preset--color--foreground-2);
+  line-height: 1.6;
+  margin-bottom: 2.2rem;
 }
 
 @media (max-width: 768px) {
-  .bullet-list {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+  .directory-summary {
+    padding: 2rem;
+  }
+
+  .directory-title-wrap {
+    gap: 1.5rem;
+  }
+
+  .directory-meta-wrap {
+    gap: 1rem;
+  }
+
+  .directory-content {
+    padding: 0 2rem 2.5rem 2rem;
   }
 }
 
-/* Clickable card structures matching rockbase styles */
-.is-style-clickable-card {
-  position: relative;
-  background-color: var(--wp--preset--color--background-2);
-  border: 1px solid var(--wp--preset--color--background-2);
-  border-radius: 20px;
-  padding: 4rem;
-  box-shadow: var(--shadow-card);
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
-              box-shadow 0.25s cubic-bezier(0.25, 0.8, 0.25, 1),
-              background-color 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
-  overflow: hidden;
+@keyframes slideDownAccordion {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Hover Lift */
-.is-style-clickable-card:hover {
-  transform: translateY(-12px);
-  box-shadow: var(--shadow-box);
-}
-
-/* Card Badge Tags (Green, Orange, Blue categories) */
+/* Category Badge Tags */
 .card-badge {
-  display: inline-block;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  padding: 0.3rem 0.8rem;
-  border-radius: 4px;
-  margin-bottom: 1.5rem;
-  align-self: start;
+  padding: 0.4rem 1.2rem;
+  border-radius: 20px;
+  display: inline-block;
 }
 
 .badge-orange {
@@ -638,97 +759,14 @@ a {
   color: var(--accent-text-blue);
 }
 
-/* SVG circle badges */
-.card-icon-wrap {
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2.2rem;
-  background-color: var(--wp--preset--color--background-1);
-  color: var(--wp--preset--color--foreground-1);
-  transition: var(--transition-normal);
-  box-shadow: var(--shadow-warm-sm);
-}
-
-.card-icon-wrap svg {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.is-style-clickable-card strong {
-  font-family: var(--font-heading);
-  font-size: 2.3rem;
-  color: var(--wp--preset--color--foreground-1);
-  margin-bottom: 1rem;
-  display: block;
-}
-
-.inner-desc {
-  font-size: 1.55rem;
-  color: var(--wp--preset--color--foreground-2);
-  margin-bottom: 3rem;
-}
-
-/* Hover Highlights (Exact Color Mappings) */
-.hover-highlight-orange:hover {
-  background-color: var(--wp--preset--color--secondary) !important;
-}
-.hover-highlight-orange:hover .card-icon-wrap {
-  background-color: var(--wp--preset--color--background-1);
-  color: var(--accent-text-orange);
-}
-
-.hover-highlight-yellow:hover {
-  background-color: var(--wp--preset--color--tertiary) !important;
-}
-.hover-highlight-yellow:hover .card-icon-wrap {
-  background-color: var(--wp--preset--color--background-1);
-  color: var(--accent-text-yellow);
-}
-
-.hover-highlight-purple:hover {
-  background-color: var(--wp--preset--color--accent) !important;
-}
-.hover-highlight-purple:hover .card-icon-wrap {
-  background-color: var(--wp--preset--color--background-1);
-  color: var(--accent-text-purple);
-}
-
-.hover-highlight-blue:hover {
-  background-color: var(--wp--preset--color--primary) !important;
-}
-.hover-highlight-blue:hover .card-icon-wrap {
-  background-color: var(--wp--preset--color--background-1);
-  color: var(--accent-text-blue);
-}
-
-/* Custom Text hover styling */
-.is-style-clickable-card:hover strong,
-.is-style-clickable-card:hover .inner-desc {
-  color: #111111 !important; /* Force to dark text during hover on pastel bg */
-}
-[data-theme="dark"] .is-style-clickable-card:hover strong,
-[data-theme="dark"] .is-style-clickable-card:hover .inner-desc {
-  color: #e5e5e5 !important;
-}
-
-/* Links Wrapper inside Clickable Cards */
+/* Links inside details content container */
 .link-pills {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
   border-top: 1px solid var(--wp--preset--color--background-1);
   padding-top: 2rem;
-  position: relative;
-  z-index: 5;
+  margin-top: 2.2rem;
 }
 
 /* Signature Button Text Arrow Link states */
@@ -741,16 +779,9 @@ a {
   gap: 1.6rem;
   transition: gap 0.2s ease-in-out;
   position: relative;
+  align-self: start;
 }
 
-.is-style-clickable-card:hover .is-style-button-text-arrow {
-  color: #111111 !important;
-}
-[data-theme="dark"] .is-style-clickable-card:hover .is-style-button-text-arrow {
-  color: #e5e5e5 !important;
-}
-
-/* Custom SVG Right Arrow inline indicator */
 .is-style-button-text-arrow::after {
   content: "";
   display: inline-block;
@@ -765,7 +796,7 @@ a {
 .is-style-button-text-arrow:hover {
   text-decoration: underline;
   text-underline-offset: 4px;
-  gap: 2.4rem; /* Slide gap wider on hover! */
+  gap: 2.4rem;
 }
 
 /* ==========================================================================
@@ -797,7 +828,7 @@ a {
 /* Star rating SVGs */
 .quote-stars {
   display: flex;
-  gap: 0.3rem;
+  gap: 0.4rem;
   margin-bottom: 1.5rem;
 }
 
@@ -1001,7 +1032,8 @@ a {
   margin-bottom: 2rem;
 }
 
-.input-group input, .input-group textarea {
+.input-group input,
+.input-group textarea {
   width: 100%;
   background-color: var(--wp--preset--color--background-1);
   border: 1px solid var(--wp--preset--color--background-2);
@@ -1014,7 +1046,8 @@ a {
   transition: var(--transition-normal);
 }
 
-.input-group input:focus, .input-group textarea:focus {
+.input-group input:focus,
+.input-group textarea:focus {
   border-color: var(--wp--preset--color--foreground-1);
   box-shadow: 0 0 0 4px var(--wp--preset--color--background-2);
 }
