@@ -113,6 +113,33 @@ a {
   }
 }
 
+/* Brand Header Navigation */
+.brand-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px dashed var(--wp--preset--color--border);
+}
+
+.brand-logo {
+  font-family: var(--font-body);
+  font-size: 1.3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent);
+}
+
+.brand-by {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--wp--preset--color--foreground-2);
+}
+
 /* Theme Switcher Button */
 .theme-toggle-btn {
   position: fixed;
