@@ -2,12 +2,122 @@
  * TourismMarketier — Minimalist Interactive Workspace Logic
  */
 
+let lenis;
+
 document.addEventListener('DOMContentLoaded', () => {
+  initLenis();
+  initOverscrollBounce();
   initThemeToggle();
   initContactForm();
   initPortfolioModal();
   initScrollspyTOC();
 });
+
+/**
+ * 0. Lenis Smooth Scroll Integration
+ */
+function initLenis() {
+  if (typeof Lenis === 'undefined') return;
+
+  lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smoothWheel: true,
+    smoothTouch: false
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
+  // Recalculate layout size on accordion expand/collapse
+  document.querySelectorAll('details').forEach((el) => {
+    el.addEventListener('toggle', () => {
+      lenis.resize();
+    });
+  });
+
+  // Intercept hash anchors for smooth easing scroll
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        lenis.scrollTo(targetEl);
+      }
+    });
+  });
+}
+
+/**
+ * 0b. Overscroll Elastic Bounce Effect
+ */
+function initOverscrollBounce() {
+  const container = document.querySelector('.workspace-page');
+  if (!container) return;
+
+  let stretch = 0;
+  let targetStretch = 0;
+  const maxStretch = 60; // Max bounce distance in pixels
+  const friction = 0.15; // Resistance to pulling
+
+  // Wheel events
+  window.addEventListener('wheel', (e) => {
+    const isAtTop = lenis ? lenis.scroll <= 0 : window.scrollY <= 0;
+    const isAtBottom = lenis ? lenis.scroll >= lenis.limit - 2 : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5;
+
+    if (isAtTop && e.deltaY < 0) {
+      targetStretch = Math.min(maxStretch, targetStretch - e.deltaY * friction);
+    } else if (isAtBottom && e.deltaY > 0) {
+      targetStretch = Math.max(-maxStretch, targetStretch - e.deltaY * friction);
+    }
+  }, { passive: true });
+
+  // Touch events for mobile
+  let touchStart = 0;
+  window.addEventListener('touchstart', (e) => {
+    touchStart = e.touches[0].clientY;
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    const touchY = e.touches[0].clientY;
+    const deltaY = touchStart - touchY;
+    touchStart = touchY;
+
+    const isAtTop = lenis ? lenis.scroll <= 0 : window.scrollY <= 0;
+    const isAtBottom = lenis ? lenis.scroll >= lenis.limit - 2 : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5;
+
+    if (isAtTop && deltaY < 0) {
+      targetStretch = Math.min(maxStretch, targetStretch - deltaY * friction * 2);
+    } else if (isAtBottom && deltaY > 0) {
+      targetStretch = Math.max(-maxStretch, targetStretch - deltaY * friction * 2);
+    }
+  }, { passive: true });
+
+  // Animation frame loop
+  function updateBounce() {
+    // Smoothly decay target stretch back to 0
+    targetStretch = targetStretch * 0.82;
+    
+    // Lerp actual stretch to target
+    stretch = stretch + (targetStretch - stretch) * 0.12;
+
+    if (Math.abs(stretch) > 0.1) {
+      container.style.transform = `translateY(${stretch}px)`;
+      container.style.transformOrigin = stretch > 0 ? 'top center' : 'bottom center';
+    } else {
+      container.style.transform = '';
+    }
+
+    requestAnimationFrame(updateBounce);
+  }
+
+  updateBounce();
+}
 
 /**
  * 1. Dark/Light Theme Switching with localStorage persistence
