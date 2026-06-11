@@ -6,6 +6,7 @@
   /* Typography */
   --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-name: 'Cormorant Garamond', 'Georgia', serif;
 
   /* Color Palette - Warm Sand & Charcoal */
   --wp--preset--color--background-1: #FCFAF7;
@@ -241,12 +242,12 @@ html.lenis body {
 }
 
 .hero-title {
-  font-family: var(--font-heading);
-  font-size: 3.6rem;
+  font-family: var(--font-name);
+  font-size: 3.8rem;
   font-weight: 700;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.4rem;
   line-height: 1.15;
+  margin-bottom: 0.4rem;
+  letter-spacing: -0.01em;
 }
 
 .hero-subtitle {
