@@ -23,7 +23,7 @@ function initThemeToggle() {
   htmlEl.setAttribute('data-theme', savedTheme);
   
   // Set initial button text based on theme to show what it will switch to
-  toggleBtn.textContent = savedTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+  toggleBtn.textContent = savedTheme === 'light' ? '☾' : '☼';
 
   toggleBtn.addEventListener('click', () => {
     const currentTheme = htmlEl.getAttribute('data-theme');
@@ -31,7 +31,7 @@ function initThemeToggle() {
     
     htmlEl.setAttribute('data-theme', newTheme);
     localStorage.setItem('tm-theme', newTheme);
-    toggleBtn.textContent = newTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+    toggleBtn.textContent = newTheme === 'light' ? '☾' : '☼';
   });
 }
 
@@ -88,6 +88,8 @@ function initPortfolioModal() {
   const modalText = document.getElementById('modal-text-content');
   const closeBtn = document.getElementById('modal-close-btn');
   const actionBtn = document.getElementById('modal-action-btn');
+  const modalImg = document.getElementById('modal-img');
+  const modalImgWrap = document.getElementById('modal-image-wrap');
   const links = document.querySelectorAll('.pill-link');
 
   if (!modal || !closeBtn || !actionBtn) return;
@@ -100,10 +102,25 @@ function initPortfolioModal() {
       const title = link.getAttribute('data-title') || 'Project Item';
       const desc = link.getAttribute('data-desc') || 'No description provided yet.';
       const category = link.getAttribute('data-category') || 'Portfolio Showcase';
+      const image = link.getAttribute('data-image');
 
       modalTitle.textContent = title;
       modalBadge.textContent = category;
       modalText.textContent = desc;
+
+      if (modalImg && modalImgWrap) {
+        if (image) {
+          modalImg.src = image;
+          modalImg.alt = title;
+          modalImg.style.display = 'block';
+          modalImgWrap.classList.remove('no-image');
+        } else {
+          modalImg.src = '';
+          modalImg.alt = '';
+          modalImg.style.display = 'none';
+          modalImgWrap.classList.add('no-image');
+        }
+      }
 
       modal.classList.add('active');
       document.body.style.overflow = 'hidden'; // Lock background scroll
