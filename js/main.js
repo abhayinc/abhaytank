@@ -8,9 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLenis();
   initOverscrollBounce();
   initThemeToggle();
-  initContactForm();
   initPortfolioModal();
-  initScrollspyTOC();
 });
 
 /**
@@ -146,49 +144,6 @@ function initThemeToggle() {
 }
 
 /**
- * 2. Contact Form Custom Submit States
- */
-function initContactForm() {
-  const form = document.getElementById('tm-notion-form');
-  const resultMsg = document.querySelector('.form-feedback-message');
-  
-  if (!form || !resultMsg) return;
-  
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const submitBtn = document.getElementById('submit-btn');
-    const originalText = submitBtn.textContent.trim();
-    
-    // UI Loading state
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    submitBtn.style.opacity = '0.5';
-    
-    const name = document.getElementById('form-name').value;
-    
-    setTimeout(() => {
-      // Success state UI changes
-      submitBtn.textContent = 'Submitted';
-      
-      resultMsg.innerHTML = `✓ Request submitted. Thank you, <strong>${name}</strong>. I will review your details shortly.`;
-      resultMsg.className = 'form-feedback-message success';
-      resultMsg.style.display = 'block';
-      
-      form.reset();
-      
-      setTimeout(() => {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        submitBtn.style.opacity = '';
-        resultMsg.style.display = 'none';
-      }, 5000);
-      
-    }, 1000);
-  });
-}
-
-/**
  * 3. Interactive Database-Pill Modal
  */
 function initPortfolioModal() {
@@ -261,41 +216,5 @@ function initPortfolioModal() {
   actionBtn.addEventListener('click', () => {
     alert(`Launching live workspace preview for: "${modalTitle.textContent}"...`);
     closeModal();
-  });
-}
-
-/**
- * 4. TOC Scrollspy Observer
- */
-function initScrollspyTOC() {
-  const sections = document.querySelectorAll('.workspace-section');
-  const tocLinks = document.querySelectorAll('#toc-links a');
-  
-  if (sections.length === 0 || tocLinks.length === 0) return;
-
-  const observerOptions = {
-    root: null,
-    rootMargin: '-20% 0px -60% 0px', // Trigger when section is around top-middle of page
-    threshold: 0
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        
-        tocLinks.forEach(link => {
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, observerOptions);
-
-  sections.forEach(section => {
-    observer.observe(section);
   });
 }

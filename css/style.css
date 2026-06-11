@@ -136,15 +136,6 @@ html.lenis body {
   }
 }
 
-/* Brand Header Navigation */
-.brand-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px dashed var(--wp--preset--color--border);
-}
 
 .brand-logo {
   font-family: var(--font-body);
