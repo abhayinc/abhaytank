@@ -871,7 +871,7 @@ html.lenis body {
 
 .workflow-row {
   border-left: 2px solid transparent;
-  padding: 3.5rem 0 3.5rem 3rem;
+  padding: 3.5rem 3rem;
   border-bottom: 1px solid var(--wp--preset--color--border);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -885,6 +885,7 @@ html.lenis body {
   background-color: var(--wp--preset--color--background-2);
   border-left-color: var(--accent-text-blue);
   padding-left: 3.5rem; /* Indent slightly when active */
+  padding-right: 3rem;
 }
 
 .row-header {
