@@ -754,116 +754,7 @@ html.lenis body {
   line-height: 1.6;
 }
 
-/* Minimalist Simulation Control Board */
-.simulation-dashboard-minimal {
-  display: flex;
-  flex-direction: column;
-  gap: 1.8rem;
-  border-bottom: 1px solid var(--wp--preset--color--border);
-  padding: 2.2rem 0;
-  margin-bottom: 4.5rem;
-}
-
-.sim-header-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  width: 100%;
-}
-
-.sim-meta {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.sim-badge {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--accent-text-blue);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.pulse-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background-color: var(--accent-text-blue);
-  display: inline-block;
-  margin-right: 0.8rem;
-  vertical-align: middle;
-}
-
-/* Pulsing dot for active simulation state */
-.sim-badge.active-sim .pulse-dot {
-  animation: pulse-ring-coral 1.5s infinite;
-}
-
-@keyframes pulse-ring-coral {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 var(--pulse-glow-color);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 8px rgba(0, 0, 0, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
-
-.sim-text-btn {
-  background: none;
-  border: none;
-  font-family: var(--font-heading);
-  font-size: 1.65rem;
-  font-weight: 700;
-  color: var(--wp--preset--color--foreground-1);
-  cursor: pointer;
-  padding: 0.5rem 0;
-  transition: var(--transition-fast);
-  letter-spacing: -0.01em;
-}
-
-.sim-text-btn:hover {
-  color: var(--accent-text-blue);
-  transform: translateY(-1px);
-}
-
-.sim-text-btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
-.sim-console {
-  width: 100%;
-  font-family: var(--font-body);
-  font-size: 1.45rem;
-  color: var(--wp--preset--color--foreground-2);
-  line-height: 1.6;
-  transition: color 0.3s ease;
-}
-
-/* Progress bar inside simulation console */
-.sim-progress-bar-wrap {
-  width: 100%;
-  height: 2px;
-  background-color: var(--wp--preset--color--border);
-  margin-top: 0.8rem;
-  overflow: hidden;
-  border-radius: 1px;
-}
-
-.sim-progress-bar-fill {
-  width: 0%;
-  height: 100%;
-  background-color: var(--accent-text-blue);
-  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-}
+/* Simulator dashboard styles removed */
 
 /* Editorial Workflow Rows */
 .workflow-rows {
@@ -883,11 +774,11 @@ html.lenis body {
   border-bottom: none;
 }
 
-.workflow-row.active {
+.workflow-row:hover {
   background-color: var(--wp--preset--color--background-2);
   border-left-color: var(--accent-text-blue);
-  padding-left: 3.5rem; /* Indent slightly when active */
-  padding-right: 3rem;
+  padding-left: 3.5rem; /* Indent slightly on hover */
+  padding-right: 2.5rem; /* Offset horizontal shift */
 }
 
 .row-header {
@@ -928,7 +819,7 @@ html.lenis body {
   align-items: center;
 }
 
-.workflow-row.active .row-icon-wrap {
+.workflow-row:hover .row-icon-wrap {
   color: var(--accent-text-blue);
   opacity: 1;
   transform: rotate(5deg) scale(1.1);
@@ -946,65 +837,7 @@ html.lenis body {
   max-width: 580px;
 }
 
-/* Simulated Message Bubble */
-.step-bubble {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.3s ease;
-  margin: 0;
-}
-
-.step-bubble.show {
-  max-height: 120px;
-  opacity: 1;
-  margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.bubble-content {
-  background-color: var(--wp--preset--color--background-2);
-  border-left: 3px solid var(--accent-text-blue);
-  border-radius: 4px;
-  padding: 1.4rem 1.8rem;
-  font-size: 1.45rem;
-  line-height: 1.55;
-  color: var(--wp--preset--color--foreground-1);
-  display: flex;
-  align-items: flex-start;
-  gap: 1.2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-}
-
-[data-theme="dark"] .bubble-content {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.bubble-pulse {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--accent-text-blue);
-  box-shadow: 0 0 0 0 var(--pulse-glow-color);
-  animation: pulse-ring-dot 1.5s infinite;
-  flex-shrink: 0;
-  margin-top: 0.6rem;
-}
-
-@keyframes pulse-ring-dot {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 var(--pulse-glow-color);
-  }
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0);
-  }
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
-}
+/* Bubbles removed */
 
 .row-links {
   display: flex;
@@ -1037,7 +870,7 @@ html.lenis body {
   .workflow-row {
     padding: 3rem 1.8rem;
   }
-  .workflow-row.active {
+  .workflow-row:hover {
     padding-left: 2.2rem;
     padding-right: 1.4rem;
   }
