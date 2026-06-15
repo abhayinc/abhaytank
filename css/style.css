@@ -19,9 +19,10 @@
   /* Muted bronze gray */
   --wp--preset--color--border: rgba(28, 25, 23, 0.08);
   /* Fine divider line */
-  --wp--preset--color--primary: #EAF2F8;
-  /* Soft blue highlight tint */
-  --accent-text-blue: #2980B9;
+  --wp--preset--color--primary: #FAF2EE;
+  /* Soft terracotta highlight tint */
+  --accent-text-blue: #C85A32;
+  /* Premium terracotta orange */
 
   /* Spacings & Layout */
   --content-width: 680px;
@@ -40,8 +41,10 @@
   --wp--preset--color--foreground-2: #A19A91;
   /* Warm dark gray */
   --wp--preset--color--border: rgba(250, 246, 240, 0.08);
-  --wp--preset--color--primary: #0F1826;
-  --accent-text-blue: #5DADE2;
+  --wp--preset--color--primary: #1F1411;
+  /* Rich terracotta tint dark */
+  --accent-text-blue: #E2876E;
+  /* Soft coral orange Accent */
   --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.4);
 }
 
@@ -736,4 +739,321 @@ html.lenis body {
 .modal-action-btn:hover {
   background-color: transparent;
   color: var(--wp--preset--color--foreground-1);
+}
+
+/* ==========================================================================
+   MINIMALIST EDITORIAL PIPELINE WORKFLOW STYLES
+   ========================================================================== */
+.section-intro {
+  font-size: 1.65rem;
+  color: var(--wp--preset--color--foreground-2);
+  margin-top: -2rem;
+  margin-bottom: 3.5rem;
+  line-height: 1.6;
+}
+
+/* Minimalist Simulation Control Board */
+.simulation-dashboard-minimal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  border-bottom: 1px solid var(--wp--preset--color--border);
+  padding: 2.2rem 0;
+  margin-bottom: 4.5rem;
+}
+
+.sim-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.sim-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sim-badge {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-text-blue);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-text-blue);
+  display: inline-block;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+
+/* Pulsing dot for active simulation state */
+.sim-badge.active-sim .pulse-dot {
+  animation: pulse-ring-coral 1.5s infinite;
+}
+
+@keyframes pulse-ring-coral {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 8px rgba(200, 90, 50, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0);
+  }
+}
+
+.sim-text-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--foreground-1);
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: var(--transition-fast);
+  letter-spacing: -0.01em;
+}
+
+.sim-text-btn:hover {
+  color: var(--accent-text-blue);
+  transform: translateY(-1px);
+}
+
+.sim-text-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sim-console {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  color: var(--wp--preset--color--foreground-2);
+  line-height: 1.6;
+  transition: color 0.3s ease;
+}
+
+/* Progress bar inside simulation console */
+.sim-progress-bar-wrap {
+  width: 100%;
+  height: 2px;
+  background-color: var(--wp--preset--color--border);
+  margin-top: 0.8rem;
+  overflow: hidden;
+  border-radius: 1px;
+}
+
+.sim-progress-bar-fill {
+  width: 0%;
+  height: 100%;
+  background-color: var(--accent-text-blue);
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Editorial Workflow Rows */
+.workflow-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.workflow-row {
+  border-left: 2px solid transparent;
+  padding: 3.5rem 0 3.5rem 3rem;
+  border-bottom: 1px solid var(--wp--preset--color--border);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.workflow-row:last-child {
+  border-bottom: none;
+}
+
+.workflow-row.active {
+  background-color: var(--wp--preset--color--primary);
+  border-left-color: var(--accent-text-blue);
+  padding-left: 3.5rem; /* Indent slightly when active */
+}
+
+.row-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.row-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 2rem;
+}
+
+.row-num {
+  font-family: var(--font-name);
+  font-size: 3.4rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--accent-text-blue);
+  line-height: 1;
+}
+
+.row-title {
+  font-family: var(--font-heading);
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--foreground-1);
+  letter-spacing: -0.01em;
+}
+
+.row-icon-wrap {
+  color: var(--wp--preset--color--foreground-2);
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.workflow-row.active .row-icon-wrap {
+  color: var(--accent-text-blue);
+  opacity: 1;
+  transform: rotate(5deg) scale(1.1);
+}
+
+.row-body {
+  padding-left: 5.6rem; /* Align body text beautifully with title (past the 01. number offset) */
+}
+
+.row-desc {
+  font-size: 1.55rem;
+  color: var(--wp--preset--color--foreground-2);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 580px;
+}
+
+/* Simulated Message Bubble */
+.step-bubble {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, margin 0.3s ease;
+  margin: 0;
+}
+
+.step-bubble.show {
+  max-height: 120px;
+  opacity: 1;
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.bubble-content {
+  background-color: var(--wp--preset--color--background-2);
+  border-left: 3px solid var(--accent-text-blue);
+  border-radius: 4px;
+  padding: 1.4rem 1.8rem;
+  font-size: 1.45rem;
+  line-height: 1.55;
+  color: var(--wp--preset--color--foreground-1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="dark"] .bubble-content {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bubble-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-text-blue);
+  box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.5);
+  animation: pulse-ring-dot 1.5s infinite;
+  flex-shrink: 0;
+  margin-top: 0.6rem;
+}
+
+@keyframes pulse-ring-dot {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0.5);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 6px rgba(200, 90, 50, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(200, 90, 50, 0);
+  }
+}
+
+.row-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem 2.8rem;
+}
+
+.row-links .pill-link {
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--wp--preset--color--foreground-1);
+  text-decoration: none;
+  border-bottom: 1px solid var(--wp--preset--color--border);
+  padding-bottom: 2px;
+  transition: all 0.2s ease;
+}
+
+.row-links .pill-link:hover {
+  color: var(--accent-text-blue);
+  border-bottom-color: var(--accent-text-blue);
+  padding-left: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .row-body {
+    padding-left: 0; /* Stack layout vertically on tablet and mobile */
+    margin-top: 1rem;
+  }
+  .workflow-row {
+    padding: 3rem 0 3rem 1.8rem;
+  }
+  .workflow-row.active {
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .sim-dashboard-minimal {
+    gap: 1.2rem;
+    padding-bottom: 2.5rem;
+  }
+  .sim-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+  }
+  .sim-text-btn {
+    width: 100%;
+    text-align: center;
+    border: 1px dashed var(--wp--preset--color--border);
+    padding: 1rem 0;
+    border-radius: 6px;
+  }
 }
