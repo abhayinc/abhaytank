@@ -208,8 +208,9 @@ html.lenis body {
    ========================================================================== */
 .workspace-hero {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 4rem;
+  gap: 2.5rem;
   margin-top: 2rem;
 }
 
@@ -218,8 +219,8 @@ html.lenis body {
 }
 
 .hero-profile-img {
-  width: 110px;
-  height: 110px;
+  width: 96px;
+  height: 96px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid var(--wp--preset--color--border);
@@ -229,56 +230,56 @@ html.lenis body {
 
 .hero-profile-img:hover {
   filter: grayscale(0%);
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
+  gap: 1.2rem;
 }
 
 .hero-title {
   font-family: var(--font-name);
-  font-size: 3.8rem;
-  font-weight: 700;
-  line-height: 1.15;
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.01em;
+  font-size: 3.6rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--wp--preset--color--foreground-1);
 }
 
 .hero-subtitle {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--wp--preset--color--foreground-2);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 2rem;
+  letter-spacing: 0.06em;
 }
 
 .hero-bio {
   font-size: 1.65rem;
   color: var(--wp--preset--color--foreground-1);
-  line-height: 1.65;
-  margin-bottom: 1.8rem;
+  line-height: 1.7;
+  max-width: 620px;
 }
 
 .hero-meta {
   font-size: 1.4rem;
   color: var(--wp--preset--color--foreground-2);
   line-height: 1.5;
+  margin-top: 0.4rem;
 }
 
 @media (max-width: 576px) {
-  .workspace-hero {
-    flex-direction: column;
-    gap: 3rem;
-  }
-
   .hero-profile-img {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+  }
+  .hero-title {
+    font-size: 3.2rem;
   }
 }
+
 
 /* ==========================================================================
    SECTIONS
