@@ -127,7 +127,7 @@ function initThemeToggle() {
   const htmlEl = document.documentElement;
 
   // Retrieve theme preference
-  const savedTheme = localStorage.getItem('tm-theme') || 'light';
+  const savedTheme = localStorage.getItem('tm-theme') || 'dark';
   htmlEl.setAttribute('data-theme', savedTheme);
   
   // Set initial button text based on theme to show what it will switch to
