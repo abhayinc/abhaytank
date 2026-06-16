@@ -392,6 +392,46 @@ html.lenis body {
   margin-bottom: 1.8rem;
 }
 
+.included-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--wp--preset--color--foreground-1);
+  margin-top: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.included-list {
+  list-style: none;
+  margin: 0 0 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.included-list li {
+  font-size: 1.45rem;
+  line-height: 1.6;
+  color: var(--wp--preset--color--foreground-2);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.included-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--foreground-2);
+  opacity: 0.6;
+}
+
+.included-list li strong {
+  color: var(--wp--preset--color--foreground-1);
+  font-weight: 600;
+}
+
+
 /* Link items wrapper */
 .link-pills {
   display: flex;
