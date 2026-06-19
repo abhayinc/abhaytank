@@ -8,51 +8,51 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-name: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
-  /* Color Palette — Midnight Voyage (Navy & Gold) */
-  --wp--preset--color--background-1: #EFF2F7;
-  /* Cool coastal mist */
-  --wp--preset--color--background-2: #FFFFFF;
-  /* Pure white card */
-  --wp--preset--color--foreground-1: #0D1B2E;
-  /* Deep midnight navy */
-  --wp--preset--color--foreground-2: #3E5A74;
-  /* Readable ocean slate */
-  --wp--preset--color--border: rgba(20, 55, 100, 0.10);
-  /* Navy tint divider */
-  --wp--preset--color--primary: #E4EBF4;
-  /* Light blue chip */
-  --accent-text-blue: #1A6E88;
-  /* Ocean teal — fits the navy bg naturally */
-  --accent-warm: #1A6E88;
-  --accent-warm-light: #9CCADE;
-  /* Sky blue light */
-  --pulse-glow-color: rgba(26, 110, 136, 0.25);
+  /* Color Palette — Forest & Linen */
+  --wp--preset--color--background-1: #F3F0E8;
+  /* Warm linen — earthy, grounded */
+  --wp--preset--color--background-2: #FAFAF5;
+  /* Soft white card */
+  --wp--preset--color--foreground-1: #182014;
+  /* Deep forest charcoal */
+  --wp--preset--color--foreground-2: #4A5A42;
+  /* Olive green — warm secondary */
+  --wp--preset--color--border: rgba(50, 80, 45, 0.12);
+  /* Forest green tint border */
+  --wp--preset--color--primary: #E2ECDA;
+  /* Pale sage chip */
+  --accent-text-blue: #3D7045;
+  /* Deep forest green accent */
+  --accent-warm: #3D7045;
+  --accent-warm-light: #A8C898;
+  /* Soft sage highlight */
+  --pulse-glow-color: rgba(61, 112, 69, 0.25);
 
   /* Spacings & Layout */
   --content-width: 680px;
   --transition-normal: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.15s ease-in-out;
-  --shadow-box: 0px 48px 80px -16px rgba(10, 30, 65, 0.10);
+  --shadow-box: 0px 48px 80px -16px rgba(20, 50, 20, 0.09);
 }
 
 [data-theme="dark"] {
-  --wp--preset--color--background-1: #080D18;
-  /* Deepest midnight — rich, atmospheric */
-  --wp--preset--color--background-2: #0F1A2C;
-  /* Card surface navy */
-  --wp--preset--color--foreground-1: #DCE9F5;
-  /* Cool parchment white */
-  --wp--preset--color--foreground-2: #6888A8;
-  /* Muted ocean blue */
-  --wp--preset--color--border: rgba(100, 150, 210, 0.10);
-  --wp--preset--color--primary: #0D1828;
-  /* Deep navy chip */
-  --accent-text-blue: #5AB8D4;
-  /* Bright teal — pops on deep navy */
-  --accent-warm: #5AB8D4;
-  --accent-warm-light: #0E2E3A;
-  /* Dark teal chip */
-  --pulse-glow-color: rgba(90, 184, 212, 0.32);
+  --wp--preset--color--background-1: #090E08;
+  /* Deep forest night — rich, immersive */
+  --wp--preset--color--background-2: #111A0D;
+  /* Dark forest card surface */
+  --wp--preset--color--foreground-1: #DFF0D0;
+  /* Warm sage-white — easy on the eye */
+  --wp--preset--color--foreground-2: #789870;
+  /* Muted forest green */
+  --wp--preset--color--border: rgba(100, 160, 90, 0.10);
+  --wp--preset--color--primary: #131C0F;
+  /* Dark sage chip */
+  --accent-text-blue: #8ACC78;
+  /* Leaf green — bright on dark forest */
+  --accent-warm: #8ACC78;
+  --accent-warm-light: #183018;
+  /* Dark moss chip */
+  --pulse-glow-color: rgba(138, 204, 120, 0.30);
   --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.6);
 }
 
@@ -73,7 +73,7 @@
    Content sits above via z-index: 1 on workspace-page
    ========================================================================== */
 
-/* Teal glow — top-right corner */
+/* Forest green glow — top-right */
 body::before {
   content: '';
   position: fixed;
@@ -83,8 +83,8 @@ body::before {
   height: 680px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(26, 110, 136, 0.10) 0%,
-    rgba(26, 110, 136, 0.04) 42%,
+    rgba(61, 112, 69, 0.10) 0%,
+    rgba(61, 112, 69, 0.04) 42%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -93,12 +93,12 @@ body::before {
 
 [data-theme="dark"] body::before {
   background: radial-gradient(ellipse at center,
-    rgba(90, 184, 212, 0.14) 0%,
-    rgba(90, 184, 212, 0.05) 42%,
+    rgba(138, 204, 120, 0.13) 0%,
+    rgba(138, 204, 120, 0.05) 42%,
     transparent 68%);
 }
 
-/* Cool navy glow — bottom-left corner */
+/* Warm amber glow — bottom-left (earthy contrast) */
 body::after {
   content: '';
   position: fixed;
@@ -108,8 +108,8 @@ body::after {
   height: 580px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(50, 100, 180, 0.10) 0%,
-    rgba(50, 100, 180, 0.04) 45%,
+    rgba(180, 140, 70, 0.09) 0%,
+    rgba(180, 140, 70, 0.04) 45%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -118,8 +118,8 @@ body::after {
 
 [data-theme="dark"] body::after {
   background: radial-gradient(ellipse at center,
-    rgba(30, 70, 150, 0.30) 0%,
-    rgba(30, 70, 150, 0.10) 45%,
+    rgba(100, 70, 20, 0.22) 0%,
+    rgba(100, 70, 20, 0.07) 45%,
     transparent 68%);
 }
 
@@ -1388,11 +1388,11 @@ body {
    ═══════════════════════════════════════════════════ */
 .directory-content {
   padding-left: 2rem;
-  border-left: 1.5px solid rgba(26, 110, 136, 0.20);
+  border-left: 1.5px solid rgba(61, 112, 69, 0.22);
 }
 
 [data-theme="dark"] .directory-content {
-  border-left-color: rgba(90, 184, 212, 0.18);
+  border-left-color: rgba(138, 204, 120, 0.18);
 }
 
 
