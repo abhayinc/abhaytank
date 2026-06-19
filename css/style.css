@@ -1426,3 +1426,95 @@ body {
   color: var(--wp--preset--color--foreground-2);
 }
 
+
+/* ==========================================================================
+   MONOCHROME DECORATIVE ELEMENTS
+   Three intentional editorial details — no colour
+   ========================================================================== */
+
+/* ── 1. Service row margin numerals — 01 02 03 ...
+   Each accordion row gets a small counter in the left margin.
+   Classic editorial / agency portfolio pattern.
+   ── */
+.directory-list {
+  counter-reset: service-counter;
+}
+
+.directory-toggle {
+  counter-increment: service-counter;
+}
+
+/* Override the earlier display:none for summary ::before */
+.directory-summary::before {
+  display: block;
+  content: counter(service-counter, decimal-leading-zero);
+  position: absolute;
+  left: -3.6rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--wp--preset--color--foreground-2);
+  opacity: 0.30;
+  pointer-events: none;
+  font-family: var(--font-heading);
+}
+
+/* ── 2. L-bracket corner marks on the content area
+   Top-left and bottom-right — like print registration marks.
+   ── */
+.workspace-page::before {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 5.5rem;
+  left: -0.8rem;
+  width: 18px;
+  height: 18px;
+  border-top: 1.5px solid var(--wp--preset--color--foreground-2);
+  border-left: 1.5px solid var(--wp--preset--color--foreground-2);
+  opacity: 0.20;
+  pointer-events: none;
+}
+
+.workspace-page::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 5.5rem;
+  right: -0.8rem;
+  width: 18px;
+  height: 18px;
+  border-bottom: 1.5px solid var(--wp--preset--color--foreground-2);
+  border-right: 1.5px solid var(--wp--preset--color--foreground-2);
+  opacity: 0.20;
+  pointer-events: none;
+}
+
+/* ── 3. Em-dash marker floating above hero
+   A faint "— — —" sits just above the content start.
+   Typographic breathing room marker, editorial.
+   ── */
+.workspace-hero::after {
+  display: block;
+  content: '— — —';
+  position: absolute;
+  top: -2.8rem;
+  left: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.35em;
+  color: var(--wp--preset--color--foreground-2);
+  opacity: 0.22;
+  pointer-events: none;
+  font-family: var(--font-body);
+}
+
+/* ── Hide margin numerals and corner marks on mobile ── */
+@media (max-width: 576px) {
+  .directory-summary::before,
+  .workspace-page::before,
+  .workspace-page::after {
+    display: none;
+  }
+}
