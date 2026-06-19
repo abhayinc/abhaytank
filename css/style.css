@@ -8,52 +8,52 @@
   --font-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-name: 'Plus Jakarta Sans', 'Inter', sans-serif;
 
-  /* Color Palette — Amber Dusk */
-  --wp--preset--color--background-1: #F7F0E4;
-  /* Richer amber cream — visibly warm */
-  --wp--preset--color--background-2: #FDF8F0;
-  /* Card surface — warm white */
-  --wp--preset--color--foreground-1: #18100A;
-  /* Near-black coffee brown */
-  --wp--preset--color--foreground-2: #6B5440;
-  /* Deep sienna — readable & warm */
-  --wp--preset--color--border: rgba(160, 105, 55, 0.16);
-  /* Visible warm amber rule */
-  --wp--preset--color--primary: #EEE0C8;
-  /* Sand chip — accordion tint etc */
-  --accent-text-blue: #C04A18;
-  /* Deep rust — bolder than before */
-  --accent-warm: #C04A18;
-  --accent-warm-light: #EBB278;
-  /* Rich amber gold */
-  --pulse-glow-color: rgba(192, 74, 24, 0.28);
+  /* Color Palette — Midnight Voyage (Navy & Gold) */
+  --wp--preset--color--background-1: #EFF2F7;
+  /* Cool coastal mist */
+  --wp--preset--color--background-2: #FFFFFF;
+  /* Pure white card */
+  --wp--preset--color--foreground-1: #0D1B2E;
+  /* Deep midnight navy */
+  --wp--preset--color--foreground-2: #3E5A74;
+  /* Readable ocean slate */
+  --wp--preset--color--border: rgba(20, 55, 100, 0.10);
+  /* Navy tint divider */
+  --wp--preset--color--primary: #E4EBF4;
+  /* Light blue chip */
+  --accent-text-blue: #B8902A;
+  /* Warm gold accent */
+  --accent-warm: #B8902A;
+  --accent-warm-light: #E2C870;
+  /* Golden honey light */
+  --pulse-glow-color: rgba(184, 144, 42, 0.28);
 
   /* Spacings & Layout */
   --content-width: 680px;
   --transition-normal: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.15s ease-in-out;
-  --shadow-box: 0px 48px 80px -16px rgba(75, 35, 10, 0.1);
+  --shadow-box: 0px 48px 80px -16px rgba(10, 30, 65, 0.10);
 }
 
 [data-theme="dark"] {
-  --wp--preset--color--background-1: #0E0906;
-  /* Deepest coffee — rich, moody */
-  --wp--preset--color--background-2: #17100A;
-  /* Card surface dark amber */
-  --wp--preset--color--foreground-1: #EEE2CC;
-  /* Warm linen white */
-  --wp--preset--color--foreground-2: #A08060;
-  /* Visible warm tan */
-  --wp--preset--color--border: rgba(200, 150, 90, 0.13);
-  --wp--preset--color--primary: #1E1508;
-  /* Dark amber chip */
-  --accent-text-blue: #F0C880;
+  --wp--preset--color--background-1: #080D18;
+  /* Deepest midnight — rich, atmospheric */
+  --wp--preset--color--background-2: #0F1A2C;
+  /* Card surface navy */
+  --wp--preset--color--foreground-1: #DCE9F5;
+  /* Cool parchment white */
+  --wp--preset--color--foreground-2: #6888A8;
+  /* Muted ocean blue */
+  --wp--preset--color--border: rgba(100, 150, 210, 0.10);
+  --wp--preset--color--primary: #0D1828;
+  /* Deep navy chip */
+  --accent-text-blue: #E0C860;
   /* Warm gold accent text */
-  --accent-warm: #E06830;
-  /* Vivid amber-orange — pops on dark */
-  --accent-warm-light: #5C2E10;
-  /* Muted dark amber */
-  --pulse-glow-color: rgba(224, 104, 48, 0.35);
+  --accent-warm: #D4A838;
+  /* Bright gold — glows on dark navy */
+  --accent-warm-light: #382C08;
+  /* Muted dark gold */
+  --pulse-glow-color: rgba(212, 168, 56, 0.35);
   --shadow-box: 0px 48px 80px -16px rgba(0, 0, 0, 0.6);
 }
 
@@ -74,18 +74,18 @@
    Content sits above via z-index: 1 on workspace-page
    ========================================================================== */
 
-/* Full-page radial warm glow — top-right corner, stronger */
+/* Golden glow — top-right corner */
 body::before {
   content: '';
   position: fixed;
-  top: -140px;
-  right: -180px;
-  width: 640px;
-  height: 640px;
+  top: -160px;
+  right: -200px;
+  width: 680px;
+  height: 680px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(192, 74, 24, 0.11) 0%,
-    rgba(192, 74, 24, 0.05) 40%,
+    rgba(184, 144, 42, 0.12) 0%,
+    rgba(184, 144, 42, 0.05) 42%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -94,23 +94,23 @@ body::before {
 
 [data-theme="dark"] body::before {
   background: radial-gradient(ellipse at center,
-    rgba(224, 104, 48, 0.14) 0%,
-    rgba(224, 104, 48, 0.06) 40%,
+    rgba(212, 168, 56, 0.16) 0%,
+    rgba(212, 168, 56, 0.06) 42%,
     transparent 68%);
 }
 
-/* Secondary warm glow — bottom-left, amber gold */
+/* Cool navy glow — bottom-left corner */
 body::after {
   content: '';
   position: fixed;
-  bottom: -120px;
-  left: -160px;
-  width: 520px;
-  height: 520px;
+  bottom: -140px;
+  left: -180px;
+  width: 580px;
+  height: 580px;
   border-radius: 50%;
   background: radial-gradient(ellipse at center,
-    rgba(235, 178, 120, 0.15) 0%,
-    rgba(235, 178, 120, 0.06) 45%,
+    rgba(50, 100, 180, 0.10) 0%,
+    rgba(50, 100, 180, 0.04) 45%,
     transparent 68%);
   pointer-events: none;
   z-index: 0;
@@ -119,8 +119,8 @@ body::after {
 
 [data-theme="dark"] body::after {
   background: radial-gradient(ellipse at center,
-    rgba(100, 55, 20, 0.25) 0%,
-    rgba(100, 55, 20, 0.08) 45%,
+    rgba(30, 70, 150, 0.30) 0%,
+    rgba(30, 70, 150, 0.10) 45%,
     transparent 68%);
 }
 
