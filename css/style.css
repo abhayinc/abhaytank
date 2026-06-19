@@ -1297,3 +1297,144 @@ body {
   background-attachment: fixed; /* keeps dot-grid fixed while scrolling — map feel */
 }
 
+
+/* ==========================================================================
+   DESIGN REFRESH
+   Less is more. Remove noise. Keep 5 intentional moves.
+   ========================================================================== */
+
+/* ── 0. Kill all the mechanical clutter ── */
+body {
+  background-image: none;
+  background-attachment: scroll;
+}
+[data-theme="dark"] body {
+  background-image: none;
+}
+
+.workspace-page::before,
+.workspace-page::after,
+.workspace-hero::before,
+.workspace-hero::after,
+.contact-section::before,
+.contact-section::after,
+.notion-footer::after,
+.directory-summary::before {
+  display: none;
+  content: none;
+}
+
+/* Also clear the dots after section headings */
+.section-h2::after {
+  display: none;
+  content: none;
+}
+
+/* Clear the ✈ before section headings */
+.section-h2::before {
+  display: none;
+  content: none;
+}
+
+/* Clear left-border-on-whole-accordion (replace below with cleaner version) */
+.directory-toggle[open] {
+  border-left: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOVE 1  —  Section headings: editorial left-bar
+   A 3px terracotta bar beside the heading. Clean, human.
+   ═══════════════════════════════════════════════════ */
+.section-h2 {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.section-h2::before {
+  content: '';
+  display: block;
+  flex-shrink: 0;
+  width: 3px;
+  height: 1.9rem;
+  background: var(--accent-warm);
+  border-radius: 2px;
+  opacity: 0.9;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOVE 2  —  Services section: warm card tint
+   The "How I Help" block sits on a barely-there
+   warm wash — enough to feel differentiated, not colored.
+   ═══════════════════════════════════════════════════ */
+.workspace-section:not(.contact-section) {
+  background: rgba(181, 98, 42, 0.032);
+  border-radius: 14px;
+  padding: 3.2rem 2.4rem;
+  margin: 6rem -2.4rem;
+}
+
+[data-theme="dark"] .workspace-section:not(.contact-section) {
+  background: rgba(212, 136, 74, 0.055);
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOVE 3  —  Open accordion: warm left-side indent
+   When an accordion opens, the content gets a warm
+   left-border indent — shows hierarchy, not shouting.
+   ═══════════════════════════════════════════════════ */
+.directory-content {
+  padding-left: 2rem;
+  border-left: 1.5px solid rgba(181, 98, 42, 0.18);
+}
+
+[data-theme="dark"] .directory-content {
+  border-left-color: rgba(212, 136, 74, 0.16);
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOVE 4  —  Contact links: animated underline reveal
+   The heavy underline is replaced with a 0→full-width
+   warm underline that draws in on hover. Elegant.
+   ═══════════════════════════════════════════════════ */
+.contact-link {
+  text-decoration: none;
+  position: relative;
+}
+
+.contact-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--accent-warm);
+  border-radius: 2px;
+  transition: width 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.contact-link:hover {
+  color: var(--accent-warm);
+}
+
+.contact-link:hover::after {
+  width: 100%;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   MOVE 5  —  Brand name: terracotta on "Marketier"
+   One colour split on the wordmark is enough brand
+   flavour in the footer. Doesn't need anything else.
+   ═══════════════════════════════════════════════════ */
+.brand-logo span {
+  color: var(--accent-warm);
+}
+
