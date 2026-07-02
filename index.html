@@ -55,42 +55,51 @@
        NAVIGATION BAR
   ══════════════════════════════════════ -->
   <nav class="nav-bar" id="nav-bar" aria-label="Main navigation">
-    <a href="#" class="nav-logo">tourism<em>marketier</em></a>
-    <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="nav-cta" id="nav-cta-btn">Let's talk</a>
+    <div class="container">
+      <a href="#" class="nav-logo">tourism<em>marketier</em></a>
+      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="nav-cta" id="nav-cta-btn">Let's talk</a>
+    </div>
   </nav>
 
   <!-- ══════════════════════════════════════
        HERO
   ══════════════════════════════════════ -->
   <section class="hero" id="hero">
-    <p class="hero-label">Abhay Tank — Travel Website Specialist</p>
-    <h1 class="hero-title">I build websites<br><em>travel brands trust.</em></h1>
-    <div class="hero-avatar-row">
-      <img src="image.png" alt="Abhay Tank" class="hero-avatar" id="hero-avatar" />
-      <p class="hero-desc">No bloated templates. Custom mobile-first booking sites, targeted Meta ads, and WhatsApp automation — delivering direct, confirmed departures for travel brands across India.</p>
-    </div>
-    <div class="hero-actions">
-      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn-primary" id="hero-wa-btn">💬 WhatsApp Me</a>
-      <a href="#work" class="btn-ghost" id="hero-work-btn">View Work</a>
-    </div>
+    <div class="container">
+      <!-- Left: headline + avatar + CTA -->
+      <div class="hero__left">
+        <p class="hero-label">Abhay Tank — Travel Website Specialist</p>
+        <h1 class="hero-title">I build websites<br><em>travel brands trust.</em></h1>
+        <div class="hero-avatar-row">
+          <img src="image.png" alt="Abhay Tank" class="hero-avatar" id="hero-avatar" />
+          <p class="hero-desc">No bloated templates. Custom mobile-first booking sites, targeted Meta ads, and WhatsApp automation — delivering direct, confirmed departures for travel brands across India.</p>
+        </div>
+        <div class="hero-actions">
+          <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn-primary" id="hero-wa-btn">💬 WhatsApp Me</a>
+          <a href="#work" class="btn-ghost" id="hero-work-btn">View Work</a>
+        </div>
+      </div>
 
-    <!-- Stats strip -->
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat__val">18+</span>
-        <span class="stat__label">Sites Launched</span>
-      </div>
-      <div class="stat">
-        <span class="stat__val">₹2.4L</span>
-        <span class="stat__label">OTA Commission Saved</span>
-      </div>
-      <div class="stat">
-        <span class="stat__val">10.5×</span>
-        <span class="stat__label">Average Ad ROI</span>
-      </div>
-      <div class="stat">
-        <span class="stat__val">48h</span>
-        <span class="stat__label">Avg. Fill Speed</span>
+      <!-- Right: stats -->
+      <div class="hero__right">
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat__val">18+</span>
+            <span class="stat__label">Sites Launched</span>
+          </div>
+          <div class="stat">
+            <span class="stat__val">₹2.4L</span>
+            <span class="stat__label">OTA Commission Saved</span>
+          </div>
+          <div class="stat">
+            <span class="stat__val">10.5×</span>
+            <span class="stat__label">Average Ad ROI</span>
+          </div>
+          <div class="stat">
+            <span class="stat__val">48h</span>
+            <span class="stat__label">Avg. Fill Speed</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -113,6 +122,7 @@
        SELECTED WORK
   ══════════════════════════════════════ -->
   <section class="section" id="work">
+    <div class="container">
     <header class="section__header">
       <h2 class="section__title">Selected Work</h2>
       <span class="section__count">03</span>
@@ -182,12 +192,14 @@
       </article>
 
     </div>
+    </div><!-- /container -->
   </section>
 
   <!-- ══════════════════════════════════════
        SERVICES
   ══════════════════════════════════════ -->
   <section class="section section--light" id="services">
+    <div class="container">
     <header class="section__header">
       <h2 class="section__title">Services</h2>
       <span class="section__count">05</span>
@@ -233,12 +245,14 @@
     </ul>
 
     <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn-outline btn-full" id="services-cta-btn">Discuss your project →</a>
+    </div><!-- /container -->
   </section>
 
   <!-- ══════════════════════════════════════
        CONTACT
   ══════════════════════════════════════ -->
   <section class="section" id="contact">
+    <div class="container">
     <header class="section__header">
       <h2 class="section__title">Let's Connect</h2>
     </header>
@@ -267,25 +281,28 @@
         <span class="contact-row__arrow" aria-hidden="true">→</span>
       </a>
     </div>
+    </div><!-- /container -->
   </section>
 
   <!-- ══════════════════════════════════════
        FOOTER
   ══════════════════════════════════════ -->
   <footer class="site-footer" id="footer">
-    <div class="site-footer__top">
-      <span class="site-footer__logo">tourism<em>marketier</em></span>
-      <p class="site-footer__tagline">Based in Gwalior. Serving travel brands Pan-India.</p>
-    </div>
-    <div class="site-footer__bottom">
-      <p class="site-footer__copy">© 2026 Abhay Tank — Built on good vibes</p>
-      <nav class="site-footer__nav" aria-label="Footer navigation">
-        <a href="#work">Work</a>
-        <span>·</span>
-        <a href="#services">Services</a>
-        <span>·</span>
-        <a href="#contact">Contact</a>
-      </nav>
+    <div class="container">
+      <div class="site-footer__top">
+        <span class="site-footer__logo">tourism<em>marketier</em></span>
+        <p class="site-footer__tagline">Based in Gwalior. Serving travel brands Pan-India.</p>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">© 2026 Abhay Tank — Built on good vibes</p>
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <a href="#work">Work</a>
+          <span>·</span>
+          <a href="#services">Services</a>
+          <span>·</span>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
     </div>
   </footer>
 
