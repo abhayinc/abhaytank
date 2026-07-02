@@ -1,234 +1,295 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhay Tank | Building Websites for Travel Brands</title>
-  <meta name="description"
-    content="I help travel agencies and tour operators get more direct bookings — through custom websites, targeted Meta ads, and WhatsApp automation." />
+  <title>Abhay Tank — Travel Tech & Marketing</title>
+  <meta name="description" content="Building websites and running ads for travel brands. Custom sites, Meta campaigns, WhatsApp automation." />
   <link rel="canonical" href="https://tourismmarketier.com/" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tourismmarketier.com/" />
-  <meta property="og:title" content="Abhay Tank | Building Websites for Travel Brands" />
-  <meta property="og:description" content="Custom websites, Meta ads, and WhatsApp automation for travel brands." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈</text></svg>" />
 
-  <!-- Fonts — matching tourismmarketier exactly -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-  <main class="mobile-shell">
+  <!-- ══════════════════════════════════════
+       TOP TICKER BAR — "Now building"
+  ══════════════════════════════════════ -->
+  <div class="top-bar" aria-label="Currently working on">
+    <span class="top-bar__label">Now building</span>
+    <div class="top-bar__track">
+      <!-- List duplicated 3× for seamless infinite scroll -->
+      <ul class="top-bar__list" aria-hidden="true">
+        <li class="top-bar__item">Custom Booking Site · <span class="top-bar__client">Himalayan Trails Co.</span></li>
+        <li class="top-bar__item">Meta Lead Ads · <span class="top-bar__client">Azure Shores Resort</span></li>
+        <li class="top-bar__item">Brand Identity + Website · <span class="top-bar__client">Wanderlust India Tours</span></li>
+        <li class="top-bar__item">WhatsApp Automation · <span class="top-bar__client">Snow Valley Stays</span></li>
+        <li class="top-bar__item">CRM Pipeline Setup · <span class="top-bar__client">Kasol Trek House</span></li>
+        <li class="top-bar__item">Itinerary PDF Design · <span class="top-bar__client">Manali Departures Co.</span></li>
+      </ul>
+      <ul class="top-bar__list" aria-hidden="true">
+        <li class="top-bar__item">Custom Booking Site · <span class="top-bar__client">Himalayan Trails Co.</span></li>
+        <li class="top-bar__item">Meta Lead Ads · <span class="top-bar__client">Azure Shores Resort</span></li>
+        <li class="top-bar__item">Brand Identity + Website · <span class="top-bar__client">Wanderlust India Tours</span></li>
+        <li class="top-bar__item">WhatsApp Automation · <span class="top-bar__client">Snow Valley Stays</span></li>
+        <li class="top-bar__item">CRM Pipeline Setup · <span class="top-bar__client">Kasol Trek House</span></li>
+        <li class="top-bar__item">Itinerary PDF Design · <span class="top-bar__client">Manali Departures Co.</span></li>
+      </ul>
+      <ul class="top-bar__list" aria-hidden="true">
+        <li class="top-bar__item">Custom Booking Site · <span class="top-bar__client">Himalayan Trails Co.</span></li>
+        <li class="top-bar__item">Meta Lead Ads · <span class="top-bar__client">Azure Shores Resort</span></li>
+        <li class="top-bar__item">Brand Identity + Website · <span class="top-bar__client">Wanderlust India Tours</span></li>
+        <li class="top-bar__item">WhatsApp Automation · <span class="top-bar__client">Snow Valley Stays</span></li>
+        <li class="top-bar__item">CRM Pipeline Setup · <span class="top-bar__client">Kasol Trek House</span></li>
+        <li class="top-bar__item">Itinerary PDF Design · <span class="top-bar__client">Manali Departures Co.</span></li>
+      </ul>
+    </div>
+  </div>
 
-    <!-- HEADER -->
-    <header id="header">
-      <a href="#" class="logo">tourism<span>marketier</span></a>
-      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="header-cta" id="header-cta-btn">Let's talk</a>
+  <!-- ══════════════════════════════════════
+       NAVIGATION BAR
+  ══════════════════════════════════════ -->
+  <nav class="nav-bar" id="nav-bar" aria-label="Main navigation">
+    <a href="#" class="nav-logo">tourism<em>marketier</em></a>
+    <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="nav-cta" id="nav-cta-btn">Let's talk</a>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <p class="hero-label">Abhay Tank — Travel Website Specialist</p>
+    <h1 class="hero-title">I build websites<br><em>travel brands trust.</em></h1>
+    <div class="hero-avatar-row">
+      <img src="image.png" alt="Abhay Tank" class="hero-avatar" id="hero-avatar" />
+      <p class="hero-desc">No bloated templates. Custom mobile-first booking sites, targeted Meta ads, and WhatsApp automation — delivering direct, confirmed departures for travel brands across India.</p>
+    </div>
+    <div class="hero-actions">
+      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn-primary" id="hero-wa-btn">💬 WhatsApp Me</a>
+      <a href="#work" class="btn-ghost" id="hero-work-btn">View Work</a>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat__val">18+</span>
+        <span class="stat__label">Sites Launched</span>
+      </div>
+      <div class="stat">
+        <span class="stat__val">₹2.4L</span>
+        <span class="stat__label">OTA Commission Saved</span>
+      </div>
+      <div class="stat">
+        <span class="stat__val">10.5×</span>
+        <span class="stat__label">Average Ad ROI</span>
+      </div>
+      <div class="stat">
+        <span class="stat__val">48h</span>
+        <span class="stat__label">Avg. Fill Speed</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       DIVIDER STRIP
+  ══════════════════════════════════════ -->
+  <div class="strip" aria-hidden="true">
+    <span>Travel Marketing</span><span class="dot">·</span>
+    <span>Custom Websites</span><span class="dot">·</span>
+    <em>Meta Ads</em><span class="dot">·</span>
+    <span>WhatsApp Funnels</span><span class="dot">·</span>
+    <em>Direct Bookings</em><span class="dot">·</span>
+    <span>Travel Marketing</span><span class="dot">·</span>
+    <span>Custom Websites</span><span class="dot">·</span>
+    <em>Meta Ads</em>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       SELECTED WORK
+  ══════════════════════════════════════ -->
+  <section class="section" id="work">
+    <header class="section__header">
+      <h2 class="section__title">Selected Work</h2>
+      <span class="section__count">03</span>
     </header>
+    <p class="section__sub">Outcome-driven projects for tour operators and boutique travel brands.</p>
 
-    <!-- HERO -->
-    <section id="hero">
-      <div class="profile-tag">Abhay Tank — Travel Website Specialist</div>
-      <div class="avatar-row">
-        <img src="image.png" alt="Abhay Tank" class="avatar-circle" id="hero-avatar" />
-      </div>
-      <h1>I build websites<br><em>travel brands trust.</em></h1>
-      <p class="hero-desc">No bloated templates. No generic agencies. Just fast, mobile-first booking sites, targeted Meta ads, and WhatsApp automation that converts inquiries into confirmed departures.</p>
-      <div class="hero-buttons">
-        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn btn-primary" id="hero-wa-btn">💬 WhatsApp Me</a>
-        <a href="#work" class="btn btn-secondary" id="hero-work-btn">View Work</a>
-      </div>
+    <div class="cases">
 
-      <!-- Stats grid -->
-      <div class="stats-grid">
-        <div class="stat-box">
-          <div class="stat-val">18+</div>
-          <div class="stat-label">Websites Launched</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-val">₹2.4L</div>
-          <div class="stat-label">OTA Commission Saved</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-val">10.5x</div>
-          <div class="stat-label">Average Ad ROI</div>
-        </div>
-        <div class="stat-box">
-          <div class="stat-val">48 hrs</div>
-          <div class="stat-label">Average Fill Speed</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services">
-      <h2 class="section-title">Service Modules</h2>
-      <p class="section-subtitle">Modular digital growth solutions built to drive direct bookings for travel brands.</p>
-
-      <div class="services-list">
-        <div class="service-item">
-          <span class="service-num">01</span>
-          <div class="service-content">
-            <h3>Brand &amp; Identity Design</h3>
-            <p>Premium logos, PDF itineraries, social kits, and visual identities built to stop scrollers on travel feeds.</p>
+      <!-- Case 1 -->
+      <article class="case" id="case-1">
+        <div class="case__img-wrap">
+          <img src="work-1.png" alt="Himalayan Trails Co. booking website" class="case__img" loading="lazy" />
+          <div class="case__tags">
+            <span class="case__tag">Website</span>
+            <span class="case__tag">CMS</span>
+            <span class="case__tag">Lead Funnel</span>
           </div>
         </div>
-        <div class="service-item">
-          <span class="service-num">02</span>
-          <div class="service-content">
-            <h3>Websites &amp; CMS</h3>
-            <p>Bespoke, mobile-first booking sites that load under 1.5 seconds — even on weak mountain 4G networks.</p>
+        <div class="case__body">
+          <div class="case__meta">
+            <span class="case__client">Himalayan Trails Co.</span>
+            <span class="case__type">Tour Operator · Manali & Spiti</span>
+          </div>
+          <p class="case__desc">Rebuilt their entire web presence — a lightning-fast booking site with a CMS letting the team publish new packages without touching code. Organic inquiries tripled in 60 days.</p>
+          <a href="#" class="case__link" id="case-link-1">Read case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <!-- Case 2 -->
+      <article class="case" id="case-2">
+        <div class="case__img-wrap">
+          <img src="work-2.png" alt="Azure Shores Resort hospitality site" class="case__img" loading="lazy" />
+          <div class="case__tags">
+            <span class="case__tag">Hospitality</span>
+            <span class="case__tag">Local SEO</span>
+            <span class="case__tag">Direct Bookings</span>
           </div>
         </div>
-        <div class="service-item">
-          <span class="service-num">03</span>
-          <div class="service-content">
-            <h3>Meta Lead Ads</h3>
-            <p>Targeted Instagram and Facebook campaigns funnelling qualified travel inquiries straight to WhatsApp.</p>
+        <div class="case__body">
+          <div class="case__meta">
+            <span class="case__client">Azure Shores Resort</span>
+            <span class="case__type">Boutique Stay · Goa Coastline</span>
+          </div>
+          <p class="case__desc">Direct reservation page bypassing OTA commission leaks entirely. Local SEO placed them #1 on Google Maps for three target search terms within 45 days of launch.</p>
+          <a href="#" class="case__link" id="case-link-2">Read case study <span aria-hidden="true">→</span></a>
+        </div>
+      </article>
+
+      <!-- Case 3 -->
+      <article class="case" id="case-3">
+        <div class="case__img-wrap">
+          <img src="work-3.png" alt="Wanderlust India Tours brand identity" class="case__img" loading="lazy" />
+          <div class="case__tags">
+            <span class="case__tag">Brand Identity</span>
+            <span class="case__tag">Meta Ads</span>
+            <span class="case__tag">Itinerary Design</span>
           </div>
         </div>
-        <div class="service-item">
-          <span class="service-num">04</span>
-          <div class="service-content">
-            <h3>WhatsApp Automation</h3>
-            <p>24/7 auto-replies, PDF brochure dispatch, lead pre-qualification, and UPI payment triggers inside chat.</p>
+        <div class="case__body">
+          <div class="case__meta">
+            <span class="case__client">Wanderlust India Tours</span>
+            <span class="case__type">Youth Travel · Pan-India</span>
           </div>
+          <p class="case__desc">Full brand identity overhaul with vertical PDF itineraries and social kits. Paired with hyper-targeted Meta WhatsApp campaigns now filling weekly departures 48 hours in advance.</p>
+          <a href="#" class="case__link" id="case-link-3">Read case study <span aria-hidden="true">→</span></a>
         </div>
-        <div class="service-item">
-          <span class="service-num">05</span>
-          <div class="service-content">
-            <h3>CRM &amp; Sales Pipeline</h3>
-            <p>Visual deal boards, follow-up alerts, and booking reports so no client inquiry ever slips through.</p>
-          </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════
+       SERVICES
+  ══════════════════════════════════════ -->
+  <section class="section section--light" id="services">
+    <header class="section__header">
+      <h2 class="section__title">Services</h2>
+      <span class="section__count">05</span>
+    </header>
+    <p class="section__sub">Modular digital growth solutions built to drive direct bookings.</p>
+
+    <ul class="services">
+      <li class="service">
+        <span class="service__num">01</span>
+        <div class="service__body">
+          <h3 class="service__name">Brand &amp; Identity Design</h3>
+          <p class="service__desc">Logos, PDF itineraries, social kits, and visual identities built to stop scrollers on travel feeds.</p>
         </div>
-      </div>
+      </li>
+      <li class="service">
+        <span class="service__num">02</span>
+        <div class="service__body">
+          <h3 class="service__name">Websites &amp; CMS</h3>
+          <p class="service__desc">Mobile-first booking sites loading under 1.5s — even on weak mountain 4G networks.</p>
+        </div>
+      </li>
+      <li class="service">
+        <span class="service__num">03</span>
+        <div class="service__body">
+          <h3 class="service__name">Meta Lead Ads</h3>
+          <p class="service__desc">Targeted Instagram and Facebook campaigns funnelling qualified travel inquiries to WhatsApp.</p>
+        </div>
+      </li>
+      <li class="service">
+        <span class="service__num">04</span>
+        <div class="service__body">
+          <h3 class="service__name">WhatsApp Automation</h3>
+          <p class="service__desc">24/7 auto-replies, PDF brochure dispatch, lead pre-qualification, and UPI payment triggers.</p>
+        </div>
+      </li>
+      <li class="service">
+        <span class="service__num">05</span>
+        <div class="service__body">
+          <h3 class="service__name">CRM &amp; Sales Pipeline</h3>
+          <p class="service__desc">Visual deal boards, follow-up alerts, and booking reports so no client inquiry slips through.</p>
+        </div>
+      </li>
+    </ul>
 
-      <div style="margin-top: 1.75rem;">
-        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn btn-secondary btn-full" id="services-cta-btn">Discuss Your Project →</a>
-      </div>
-    </section>
+    <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn-outline btn-full" id="services-cta-btn">Discuss your project →</a>
+  </section>
 
-    <!-- SELECTED WORK -->
-    <section id="work">
-      <h2 class="section-title">Selected Work</h2>
-      <p class="section-subtitle">Outcome-driven projects for tour operators and boutique travel brands.</p>
+  <!-- ══════════════════════════════════════
+       CONTACT
+  ══════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <header class="section__header">
+      <h2 class="section__title">Let's Connect</h2>
+    </header>
+    <p class="section__sub">No long forms. Just drop me a message about what you're building.</p>
 
-      <div class="work-list">
+    <div class="contact-list">
+      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="contact-row" id="contact-wa">
+        <div class="contact-row__info">
+          <span class="contact-row__label">WhatsApp</span>
+          <span class="contact-row__val">+91 91740 24621</span>
+        </div>
+        <span class="contact-row__arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="mailto:tourismmarketier@gmail.com" class="contact-row" id="contact-email">
+        <div class="contact-row__info">
+          <span class="contact-row__label">Email</span>
+          <span class="contact-row__val">tourismmarketier@gmail.com</span>
+        </div>
+        <span class="contact-row__arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="contact-row" id="contact-web">
+        <div class="contact-row__info">
+          <span class="contact-row__label">Website</span>
+          <span class="contact-row__val">tourismmarketier.com</span>
+        </div>
+        <span class="contact-row__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
 
-        <!-- Project 1 -->
-        <article class="work-card" id="work-card-1">
-          <div class="work-img-container">
-            <img src="work-1.png" alt="Himalayan Trails Co. booking website" loading="lazy" />
-          </div>
-          <div class="work-details">
-            <div class="work-brand">Himalayan Trails Co.</div>
-            <div class="work-niche">Tour Operator · Manali &amp; Spiti</div>
-            <p class="work-desc">Rebuilt their entire web presence from scratch — a lightning-fast booking site with an integrated CMS letting the team publish new packages without touching code. Organic inquiries tripled in 60 days.</p>
-            <div class="work-tags">
-              <span class="tag">Custom Website</span>
-              <span class="tag">CMS Setup</span>
-              <span class="tag">Lead Funnel</span>
-            </div>
-            <a href="#" class="work-link" id="work-link-1">Read Case Study <span>→</span></a>
-          </div>
-        </article>
-
-        <!-- Project 2 -->
-        <article class="work-card" id="work-card-2">
-          <div class="work-img-container">
-            <img src="work-2.png" alt="Azure Shores Resort hospitality site" loading="lazy" />
-          </div>
-          <div class="work-details">
-            <div class="work-brand">Azure Shores Resort</div>
-            <div class="work-niche">Boutique Stay · Goa Coastline</div>
-            <p class="work-desc">Engineered a direct reservation page bypassing OTA commission leaks entirely. Local SEO overhaul placed them #1 on Google Maps for three target search terms within 45 days of launch.</p>
-            <div class="work-tags">
-              <span class="tag">Hospitality Site</span>
-              <span class="tag">Local SEO</span>
-              <span class="tag">Direct Bookings</span>
-            </div>
-            <a href="#" class="work-link" id="work-link-2">Read Case Study <span>→</span></a>
-          </div>
-        </article>
-
-        <!-- Project 3 -->
-        <article class="work-card" id="work-card-3">
-          <div class="work-img-container">
-            <img src="work-3.png" alt="Wanderlust India Tours brand identity" loading="lazy" />
-          </div>
-          <div class="work-details">
-            <div class="work-brand">Wanderlust India Tours</div>
-            <div class="work-niche">Youth Travel · Pan-India Departures</div>
-            <p class="work-desc">Full brand identity overhaul — new logo, colour system, vertical PDF itineraries, and social media kit. Paired with hyper-targeted Meta WhatsApp campaigns that now fill weekly departures 48 hours in advance.</p>
-            <div class="work-tags">
-              <span class="tag">Brand Identity</span>
-              <span class="tag">Meta Ads</span>
-              <span class="tag">Itinerary Design</span>
-            </div>
-            <a href="#" class="work-link" id="work-link-3">Read Case Study <span>→</span></a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact">
-      <h2 class="section-title">Let's Connect</h2>
-      <p class="section-subtitle">No long forms or corporate speak. Just drop me a message about what you're building.</p>
-
-      <div class="contact-card">
-        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="contact-item" id="contact-wa-btn">
-          <span class="contact-icon">💬</span>
-          <div class="contact-info">
-            <span class="contact-label">WhatsApp</span>
-            <span class="contact-val">+91 91740 24621</span>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-        <a href="mailto:tourismmarketier@gmail.com" class="contact-item" id="contact-email-btn">
-          <span class="contact-icon">✉️</span>
-          <div class="contact-info">
-            <span class="contact-label">Email</span>
-            <span class="contact-val">tourismmarketier@gmail.com</span>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-        <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="contact-item" id="contact-site-btn">
-          <span class="contact-icon">🌐</span>
-          <div class="contact-info">
-            <span class="contact-label">Portfolio</span>
-            <span class="contact-val">tourismmarketier.com</span>
-          </div>
-          <span class="arrow">→</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="footer">
-      <div class="footer-nav">
-        <a href="#services">Services</a>
-        <span>·</span>
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer" id="footer">
+    <div class="site-footer__top">
+      <span class="site-footer__logo">tourism<em>marketier</em></span>
+      <p class="site-footer__tagline">Based in Gwalior. Serving travel brands Pan-India.</p>
+    </div>
+    <div class="site-footer__bottom">
+      <p class="site-footer__copy">© 2026 Abhay Tank — Built on good vibes</p>
+      <nav class="site-footer__nav" aria-label="Footer navigation">
         <a href="#work">Work</a>
         <span>·</span>
+        <a href="#services">Services</a>
+        <span>·</span>
         <a href="#contact">Contact</a>
-      </div>
-      <p class="footer-copyright">© 2026 Abhay Tank. All rights reserved.</p>
-      <p class="footer-motto">tourismmarketier — outcome-driven travel marketing.</p>
-    </footer>
-
-  </main>
+      </nav>
+    </div>
+  </footer>
 
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 </html>
