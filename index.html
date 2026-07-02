@@ -1,41 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhay Tank | Tourism Tech and Marketing</title>
+  <title>Abhay Tank | Building Websites for Travel Brands</title>
   <meta name="description"
     content="I help travel agencies and tour operators streamline their lead-gen process. By combining custom websites, targeted ads, and WhatsApp automation." />
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://tourismmarketier.com/" />
 
-  <!-- Favicon (Minimalist Emoji Favicon) -->
+  <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>" />
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tourismmarketier.com/" />
-  <meta property="og:title" content="Abhay Tank | Tourism Tech and Marketing" />
+  <meta property="og:title" content="Abhay Tank | Building Websites for Travel Brands" />
   <meta property="og:description"
-    content="I help travel agencies and tour operators streamline their lead-gen process. By combining custom websites, targeted ads, and WhatsApp automation." />
+    content="I help travel agencies and tour operators streamline their lead-gen process." />
   <meta property="og:image" content="https://tourismmarketier.com/image.png" />
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://tourismmarketier.com/" />
-  <meta property="twitter:title" content="Abhay Tank | Tourism Tech and Marketing" />
-  <meta property="twitter:description"
-    content="I help travel agencies and tour operators streamline their lead-gen process. By combining custom websites, targeted ads, and WhatsApp automation." />
-  <meta property="twitter:image" content="https://tourismmarketier.com/image.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
     rel="stylesheet" />
 
   <!-- Stylesheet -->
@@ -44,292 +36,240 @@
 
 <body>
 
-  <!-- Floating Top-Right Theme Toggle Button -->
-  <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">☾</button>
+  <!-- ───────────────────────────────────────────────
+       OUTER WRAPPER — mimics the phone card shell
+  ─────────────────────────────────────────────── -->
+  <div class="page-shell">
 
-  <main class="workspace-page">
-
-
-
-    <!-- Hero Section -->
-    <header class="workspace-hero">
-      <div class="hero-image-wrap">
-        <img src="image.png" alt="Abhay Tank" class="hero-profile-img" />
+    <!-- TOP NAV BAR -->
+    <nav class="top-nav" aria-label="Profile navigation">
+      <div class="top-nav__logo" aria-label="tourismMarketier">
+        <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M11 2L13.09 8.26L19.78 8.27L14.45 12.14L16.55 18.4L11 14.5L5.45 18.4L7.55 12.14L2.22 8.27L8.91 8.26L11 2Z" fill="currentColor"/>
+        </svg>
       </div>
-      <div class="hero-content">
-        <h1 class="hero-title">Abhay Tank</h1>
-        <p class="hero-subtitle">Tourism Tech and Marketing</p>
-        <p class="hero-bio">
-          I help travel agencies and tour operators streamline their Lead-Generation process by designing custom
-          websites,
-          targeted ads, and WhatsApp automation.
-        </p>
-        <p class="hero-meta">
-          Based in Gwalior, serving clients Pan-India.
-        </p>
+      <div class="top-nav__actions">
+        <button class="btn-subscribe" id="subscribe-btn" aria-label="Subscribe">Subscribe</button>
+        <button class="btn-share" id="share-btn" aria-label="Share profile">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+            <polyline points="16 6 12 2 8 6"/>
+            <line x1="12" y1="2" x2="12" y2="15"/>
+          </svg>
+        </button>
       </div>
+    </nav>
+
+    <!-- PROFILE INFO — avatar + name + tagline -->
+    <header class="profile-info" aria-label="Profile information">
+      <div class="avatar-wrap">
+        <img src="image.png" alt="Abhay Tank" class="avatar-img" id="hero-photo" />
+      </div>
+      <h1 class="profile-name">Abhay Tank</h1>
+      <p class="profile-tagline">Building Websites for Travel Brands</p>
+      <p class="profile-sub">
+        <span class="profile-icon" aria-hidden="true">✈️</span>
+        <span>Travel Tech &amp; Marketing</span>
+      </p>
     </header>
 
-    <hr class="workspace-hr" />
+    <!-- CARDS FEED -->
+    <div class="cards-feed" role="main" aria-label="Content cards">
 
-    <!-- Directory (Editorial Services Workflow) -->
-    <section class="workspace-section">
-      <h2 class="section-h2">How I Help</h2>
-      <p class="section-intro">
-        An end-to-end client acquisition system built for travel agencies.
-      </p>
-
-      <!-- Editorial Timeline Toggles (Dropdown format) -->
-      <div class="directory-list">
-
-        <!-- Row 1: Brand Setup & Refresh -->
-        <details class="directory-toggle" id="step-1">
-          <summary class="directory-summary">
-            <span class="directory-title-text">01 / Brand Setup & Refresh</span>
-            <span class="directory-arrow">→</span>
-          </summary>
-          <div class="directory-content">
-            <p class="inner-desc">
-              Overhauling your logo, typography, and visual assets. Crafting visual day-by-day PDF itineraries and
-              proposals that build instant traveler trust.
-            </p>
-            <h4 class="included-title">What’s Included:</h4>
-            <ul class="included-list">
-              <li><strong>Logo & Identity Design:</strong> Modern logo, color palette, and brand typography.</li>
-              <li><strong>Proposal PDF Templates:</strong> Edit-ready day-by-day itineraries to share with travelers.
-              </li>
-              <li><strong>Social Media Kit:</strong> Cohesive templates for Instagram and Facebook posts.</li>
-              <li><strong>Stationery Layouts:</strong> Premium designs for business cards, invoices, and vouchers.</li>
-            </ul>
-
+      <!-- CARD 1: Recent Works Gallery -->
+      <article class="feed-card" id="recent-works-card">
+        <div class="gallery-preview" aria-label="Recent works gallery preview">
+          <!-- Stacked image fan effect -->
+          <div class="gallery-fan">
+            <img src="work-3.png" alt="Wanderlust India Tours" class="fan-img fan-img--back" loading="lazy" />
+            <img src="work-2.png" alt="Azure Shores Resort" class="fan-img fan-img--mid" loading="lazy" />
+            <img src="work-1.png" alt="Himalayan Trails Co." class="fan-img fan-img--front" loading="lazy" />
           </div>
-        </details>
-
-        <!-- Row 2: Website Development & CMS -->
-        <details class="directory-toggle" id="step-2">
-          <summary class="directory-summary">
-            <span class="directory-title-text">02 / Website Development & CMS</span>
-            <span class="directory-arrow">→</span>
-          </summary>
-          <div class="directory-content">
-            <p class="inner-desc">
-              Building ultra-fast, mobile-first booking engines and destination websites that make updating packages
-              effortless.
-            </p>
-            <h4 class="included-title">What’s Included:</h4>
-            <ul class="included-list">
-              <li><strong>Custom Travel Sites:</strong> Fast, mobile-first pages built to convert visitors.</li>
-              <li><strong>Easy-to-Use CMS:</strong> Effortlessly add or update itineraries, routes, and pricing.</li>
-              <li><strong>Lead Funnels:</strong> Built-in contact forms and booking triggers.</li>
-              <li><strong>WhatsApp Integration:</strong> One-tap DMs to connect clients with your sales team.</li>
-            </ul>
-
-          </div>
-        </details>
-
-        <!-- Row 3: Lead Generation via Meta Ads -->
-        <details class="directory-toggle" id="step-3">
-          <summary class="directory-summary">
-            <span class="directory-title-text">03 / Lead Generation via Meta Ads</span>
-            <span class="directory-arrow">→</span>
-          </summary>
-          <div class="directory-content">
-            <p class="inner-desc">
-              Launching targeted Instagram and Facebook ad campaigns. Generating qualified travel inquiries complete
-              with verified names, contact numbers, and travel dates.
-            </p>
-            <h4 class="included-title">What’s Included:</h4>
-            <ul class="included-list">
-              <li><strong>Targeted Campaigns:</strong> Highly focused ads aiming directly at active travelers.</li>
-              <li><strong>High-Converting Ad Copy:</strong> Persuasive hooks and headlines designed to stop the scroll.
-              </li>
-              <li><strong>Performance Tracking:</strong> Clean reports on metrics, cost-per-lead, and visual budget
-                translation.</li>
-              <li><strong>Budget Optimization:</strong> Carefully managed spend to maximize qualified traveler DMs.</li>
-            </ul>
-
-          </div>
-        </details>
-
-        <!-- Row 4: WhatsApp Automation -->
-        <details class="directory-toggle" id="step-4">
-          <summary class="directory-summary">
-            <span class="directory-title-text">04 / WhatsApp Automation</span>
-            <span class="directory-arrow">→</span>
-          </summary>
-          <div class="directory-content">
-            <p class="inner-desc">
-              Setting up 24/7 automated responders. Instantly dispatch PDF brochures, pre-qualify lead budgets/dates,
-              and route warm chats to your sales agents.
-            </p>
-            <h4 class="included-title">What’s Included:</h4>
-            <ul class="included-list">
-              <li><strong>24/7 Auto-Replies:</strong> Instant messaging flows to answer traveler questions instantly.
-              </li>
-              <li><strong>Brochure Dispatch:</strong> Automatic PDF itinerary delivery the second a lead inquires.</li>
-              <li><strong>Lead Qualification:</strong> Pre-call chatbot questions about budget, dates, and destination.
-              </li>
-              <li><strong>Agent Routing:</strong> Transferring warm, ready-to-book chats directly to your team.</li>
-            </ul>
-
-          </div>
-        </details>
-
-        <!-- Row 5: CRM Setup & Sales Pipeline -->
-        <details class="directory-toggle" id="step-5">
-          <summary class="directory-summary">
-            <span class="directory-title-text">05 / CRM Setup & Sales Pipeline</span>
-            <span class="directory-arrow">→</span>
-          </summary>
-          <div class="directory-content">
-            <p class="inner-desc">
-              Setting up a clean tracking system to follow every travel lead from first contact to final booking.
-            </p>
-            <h4 class="included-title">What’s Included:</h4>
-            <ul class="included-list">
-              <li><strong>Visual Sales Board:</strong> Clean pipelines tracking deal stages from inquiry to payment.
-              </li>
-              <li><strong>Follow-Up Alerts:</strong> Automated reminders to agents so no client booking gets lost.</li>
-              <li><strong>Traveler History:</strong> Client details, trip dates, and chat logs saved in one place.</li>
-              <li><strong>Booking Reports:</strong> Simple revenue charts highlighting your top-selling packages.</li>
-            </ul>
-
-          </div>
-        </details>
-
-      </div>
-    </section>
-
-    <hr class="workspace-hr" />
-
-    <!-- Selected Work -->
-    <section class="workspace-section work-section">
-      <h2 class="section-h2">Selected Work</h2>
-      <p class="section-intro">Recent projects for travel and hospitality brands.</p>
-
-      <div class="work-grid">
-
-        <!-- Card 1 — full width, website project -->
-        <article class="work-card work-card--wide">
-          <div class="work-card-media">
-            <img src="work-1.png" alt="Himalayan Trails Co. booking website design" class="work-card-img" loading="lazy" />
-            <span class="work-tag">Website + CMS</span>
-          </div>
-          <p class="work-caption">Himalayan Trails Co. &mdash; Website &amp; CMS</p>
-        </article>
-
-        <!-- Card 2 — half width -->
-        <article class="work-card">
-          <div class="work-card-media">
-            <img src="work-2.png" alt="Azure Shores Resort website design" class="work-card-img" loading="lazy" />
-            <span class="work-tag">Hospitality Website</span>
-          </div>
-          <p class="work-caption">Azure Shores Resort &mdash; Hospitality Site</p>
-        </article>
-
-        <!-- Card 3 — half width -->
-        <article class="work-card">
-          <div class="work-card-media">
-            <img src="work-3.png" alt="Wanderlust India Tours brand identity" class="work-card-img" loading="lazy" />
-            <span class="work-tag">Brand Identity</span>
-          </div>
-          <p class="work-caption">Wanderlust India Tours &mdash; Brand Identity</p>
-        </article>
-
-      </div>
-    </section>
-
-    <hr class="workspace-hr" />
-
-    <!-- Contact Section -->
-    <section class="workspace-section contact-section">
-      <h2 class="section-h2">Let’s work together</h2>
-      <p class="contact-prompt">
-        Just drop me a DM with your requirements, and let's get started.
-      </p>
-      <div class="contact-links">
-        <a href="tel:+919174024621" class="contact-link">Call</a>
-        <span class="contact-divider">/</span>
-        <a href="mailto:tourismmarketier@gmail.com" class="contact-link">Email</a>
-        <span class="contact-divider">/</span>
-        <a href="https://wa.me/919174024621" class="contact-link" target="_blank" rel="noopener">WhatsApp</a>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="notion-footer">
-      <div class="footer-grid">
-        <div class="footer-left">
-          <div class="brand-logo">tourism<span>Marketier</span></div>
-          <p class="footer-tagline">end-to-end marketing and tech for travel and hospitality brands</p>
         </div>
-        <div class="footer-right">
-          <div class="footer-services-list">
-            <span>Brand Refresh</span>
-            <span class="footer-divider">|</span>
-            <span>CMS Websites</span>
-            <span class="footer-divider">|</span>
-            <span>Meta Lead Ads</span>
-            <span class="footer-divider">|</span>
-            <span>WhatsApp Automation</span>
-            <span class="footer-divider">|</span>
-            <span>CRM Setup</span>
+        <div class="card-body">
+          <div class="card-text-wrap">
+            <p class="card-label">Recent Works</p>
+            <p class="card-meta">
+              <span class="card-meta-icon" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                </svg>
+              </span>
+              Gallery · 3 photos
+            </p>
           </div>
-          <p class="footer-status">Available for select projects.</p>
-          <div class="footer-socials">
-            <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-linkedin">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                <rect x="2" y="9" width="4" height="12"></rect>
-                <circle cx="4" cy="4" r="2"></circle>
+          <button class="card-menu-btn" id="works-menu-btn" aria-label="More options for Recent Works">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/>
+            </svg>
+          </button>
+        </div>
+      </article>
+
+      <!-- CARD 2: Portfolio Website Link -->
+      <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="feed-card feed-card--link" id="portfolio-link-card" aria-label="Visit our Portfolio Website">
+        <div class="link-icon-wrap" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <span class="link-card-label">Visit our Portfolio Website</span>
+        <button class="card-menu-btn" id="portfolio-menu-btn" aria-label="More options for Portfolio Website" tabindex="-1">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/>
+          </svg>
+        </button>
+      </a>
+
+      <!-- CARD 3: How I Help — services accordion -->
+      <article class="feed-card feed-card--accordion" id="services-card">
+        <div class="acc-header" id="acc-toggle-btn" role="button" aria-expanded="false" aria-controls="acc-services-body" tabindex="0">
+          <div class="acc-header-left">
+            <span class="acc-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/>
+                <polyline points="10 9 9 9 8 9"/>
               </svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Twitter">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-twitter">
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                </path>
-              </svg>
-            </a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-instagram">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
+            </span>
+            <div>
+              <p class="card-label">How I Help</p>
+              <p class="card-meta">5 services · Travel &amp; Marketing</p>
+            </div>
           </div>
+          <span class="acc-chevron" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </span>
         </div>
-      </div>
-    </footer>
-
-  </main>
-
-  <!-- Details Modal -->
-  <div class="modal-overlay" id="portfolio-modal">
-    <div class="modal-card">
-      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">&times;</button>
-      <div class="modal-grid">
-        <div class="modal-image-wrap" id="modal-image-wrap">
-          <img src="" alt="" id="modal-img" class="modal-preview-img" />
-        </div>
-        <div class="modal-info-wrap">
-          <div class="modal-info-header">
-            <span class="modal-badge" id="modal-badge-text">Showcase</span>
-            <h3 class="modal-title" id="modal-title-text">Project Details</h3>
+        <div class="acc-body" id="acc-services-body" hidden>
+          <div class="service-list">
+            <div class="service-item">
+              <span class="service-num">01</span>
+              <div>
+                <p class="service-name">Brand Setup &amp; Refresh</p>
+                <p class="service-desc">Logo, typography, PDF itineraries &amp; social kit</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-num">02</span>
+              <div>
+                <p class="service-name">Website Development &amp; CMS</p>
+                <p class="service-desc">Fast, mobile-first booking sites with easy CMS</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-num">03</span>
+              <div>
+                <p class="service-name">Lead Generation via Meta Ads</p>
+                <p class="service-desc">Targeted Instagram &amp; Facebook ad campaigns</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-num">04</span>
+              <div>
+                <p class="service-name">WhatsApp Automation</p>
+                <p class="service-desc">24/7 auto-replies, brochure dispatch &amp; lead routing</p>
+              </div>
+            </div>
+            <div class="service-item">
+              <span class="service-num">05</span>
+              <div>
+                <p class="service-name">CRM Setup &amp; Sales Pipeline</p>
+                <p class="service-desc">Visual boards, follow-up alerts &amp; booking reports</p>
+              </div>
+            </div>
           </div>
-          <p class="modal-text" id="modal-text-content">
-            Details about the selected portfolio piece will appear here.
-          </p>
-          <button class="modal-action-btn" id="modal-action-btn">Launch Workspace</button>
+          <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="cta-btn" id="whatsapp-cta-btn">Let's Talk →</a>
         </div>
+      </article>
+
+      <!-- CARD 4: Contact -->
+      <article class="feed-card feed-card--contact" id="contact-card">
+        <p class="contact-heading">Let's work together</p>
+        <p class="contact-sub">Based in Gwalior, serving clients Pan-India.</p>
+        <div class="contact-actions">
+          <a href="mailto:tourismmarketier@gmail.com" class="contact-chip" id="email-chip-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            Email
+          </a>
+          <a href="tel:+919174024621" class="contact-chip" id="call-chip-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.32 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l1-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            Call
+          </a>
+          <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="contact-chip contact-chip--wa" id="whatsapp-chip-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </article>
+
+    </div><!-- /cards-feed -->
+
+    <!-- BOTTOM TAB BAR -->
+    <nav class="bottom-tab-bar" aria-label="Social links">
+      <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="tab-btn" id="website-tab-btn" aria-label="Website">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </a>
+      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="tab-btn" id="wa-tab-btn" aria-label="WhatsApp">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+        </svg>
+      </a>
+      <a href="mailto:tourismmarketier@gmail.com" class="tab-btn" id="email-tab-btn" aria-label="Email">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+      </a>
+    </nav>
+
+  </div><!-- /page-shell -->
+
+  <!-- GALLERY LIGHTBOX OVERLAY -->
+  <div class="lightbox-overlay" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Works gallery" hidden>
+    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close gallery">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <div class="lightbox-slides" id="lightbox-slides">
+      <div class="lightbox-slide">
+        <img src="work-1.png" alt="Himalayan Trails Co. — Website & CMS" class="lightbox-img" loading="lazy" />
+        <p class="lightbox-caption">Himalayan Trails Co. — Website &amp; CMS</p>
       </div>
+      <div class="lightbox-slide">
+        <img src="work-2.png" alt="Azure Shores Resort — Hospitality Site" class="lightbox-img" loading="lazy" />
+        <p class="lightbox-caption">Azure Shores Resort — Hospitality Site</p>
+      </div>
+      <div class="lightbox-slide">
+        <img src="work-3.png" alt="Wanderlust India Tours — Brand Identity" class="lightbox-img" loading="lazy" />
+        <p class="lightbox-caption">Wanderlust India Tours — Brand Identity</p>
+      </div>
+    </div>
+    <div class="lightbox-nav">
+      <button class="lightbox-prev" id="lightbox-prev-btn" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <span class="lightbox-dots" id="lightbox-dots" aria-hidden="true"></span>
+      <button class="lightbox-next" id="lightbox-next-btn" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
     </div>
   </div>
 
@@ -337,6 +277,7 @@
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
   <!-- Javascript -->
   <script src="js/main.js"></script>
+
 </body>
 
 </html>
