@@ -6,278 +6,229 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abhay Tank | Building Websites for Travel Brands</title>
   <meta name="description"
-    content="I help travel agencies and tour operators streamline their lead-gen process. By combining custom websites, targeted ads, and WhatsApp automation." />
-
-  <!-- Canonical URL -->
+    content="I help travel agencies and tour operators get more direct bookings — through custom websites, targeted Meta ads, and WhatsApp automation." />
   <link rel="canonical" href="https://tourismmarketier.com/" />
-
-  <!-- Favicon -->
   <link rel="icon"
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✈️</text></svg>" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tourismmarketier.com/" />
   <meta property="og:title" content="Abhay Tank | Building Websites for Travel Brands" />
-  <meta property="og:description"
-    content="I help travel agencies and tour operators streamline their lead-gen process." />
-  <meta property="og:image" content="https://tourismmarketier.com/image.png" />
+  <meta property="og:description" content="Custom websites, Meta ads, and WhatsApp automation for travel brands." />
 
-  <!-- Fonts -->
+  <!-- Fonts — matching tourismmarketier exactly -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-  <!-- ───────────────────────────────────────────────
-       OUTER WRAPPER — mimics the phone card shell
-  ─────────────────────────────────────────────── -->
-  <div class="page-shell">
+  <main class="mobile-shell">
 
-    <!-- TOP NAV BAR -->
-    <nav class="top-nav" aria-label="Profile navigation">
-      <div class="top-nav__logo" aria-label="tourismMarketier">
-        <svg width="18" height="18" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M11 2L13.09 8.26L19.78 8.27L14.45 12.14L16.55 18.4L11 14.5L5.45 18.4L7.55 12.14L2.22 8.27L8.91 8.26L11 2Z" fill="currentColor"/>
-        </svg>
-      </div>
-      <div class="top-nav__actions">
-        <button class="btn-subscribe" id="subscribe-btn" aria-label="Subscribe">Subscribe</button>
-        <button class="btn-share" id="share-btn" aria-label="Share profile">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
-            <polyline points="16 6 12 2 8 6"/>
-            <line x1="12" y1="2" x2="12" y2="15"/>
-          </svg>
-        </button>
-      </div>
-    </nav>
-
-    <!-- PROFILE INFO — avatar + name + tagline -->
-    <header class="profile-info" aria-label="Profile information">
-      <div class="avatar-wrap">
-        <img src="image.png" alt="Abhay Tank" class="avatar-img" id="hero-photo" />
-      </div>
-      <h1 class="profile-name">Abhay Tank</h1>
-      <p class="profile-tagline">Building Websites for Travel Brands</p>
-      <p class="profile-sub">
-        <span class="profile-icon" aria-hidden="true">✈️</span>
-        <span>Travel Tech &amp; Marketing</span>
-      </p>
+    <!-- HEADER -->
+    <header id="header">
+      <a href="#" class="logo">tourism<span>marketier</span></a>
+      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="header-cta" id="header-cta-btn">Let's talk</a>
     </header>
 
-    <!-- CARDS FEED -->
-    <div class="cards-feed" role="main" aria-label="Content cards">
-
-      <!-- CARD 1: Recent Works Gallery -->
-      <article class="feed-card" id="recent-works-card">
-        <div class="gallery-preview" aria-label="Recent works gallery preview">
-          <!-- Stacked image fan effect -->
-          <div class="gallery-fan">
-            <img src="work-3.png" alt="Wanderlust India Tours" class="fan-img fan-img--back" loading="lazy" />
-            <img src="work-2.png" alt="Azure Shores Resort" class="fan-img fan-img--mid" loading="lazy" />
-            <img src="work-1.png" alt="Himalayan Trails Co." class="fan-img fan-img--front" loading="lazy" />
-          </div>
-        </div>
-        <div class="card-body">
-          <div class="card-text-wrap">
-            <p class="card-label">Recent Works</p>
-            <p class="card-meta">
-              <span class="card-meta-icon" aria-hidden="true">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
-                </svg>
-              </span>
-              Gallery · 3 photos
-            </p>
-          </div>
-          <button class="card-menu-btn" id="works-menu-btn" aria-label="More options for Recent Works">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/>
-            </svg>
-          </button>
-        </div>
-      </article>
-
-      <!-- CARD 2: Portfolio Website Link -->
-      <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="feed-card feed-card--link" id="portfolio-link-card" aria-label="Visit our Portfolio Website">
-        <div class="link-icon-wrap" aria-hidden="true">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
-            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-          </svg>
-        </div>
-        <span class="link-card-label">Visit our Portfolio Website</span>
-        <button class="card-menu-btn" id="portfolio-menu-btn" aria-label="More options for Portfolio Website" tabindex="-1">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/>
-          </svg>
-        </button>
-      </a>
-
-      <!-- CARD 3: How I Help — services accordion -->
-      <article class="feed-card feed-card--accordion" id="services-card">
-        <div class="acc-header" id="acc-toggle-btn" role="button" aria-expanded="false" aria-controls="acc-services-body" tabindex="0">
-          <div class="acc-header-left">
-            <span class="acc-icon" aria-hidden="true">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/>
-                <polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </span>
-            <div>
-              <p class="card-label">How I Help</p>
-              <p class="card-meta">5 services · Travel &amp; Marketing</p>
-            </div>
-          </div>
-          <span class="acc-chevron" aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </span>
-        </div>
-        <div class="acc-body" id="acc-services-body" hidden>
-          <div class="service-list">
-            <div class="service-item">
-              <span class="service-num">01</span>
-              <div>
-                <p class="service-name">Brand Setup &amp; Refresh</p>
-                <p class="service-desc">Logo, typography, PDF itineraries &amp; social kit</p>
-              </div>
-            </div>
-            <div class="service-item">
-              <span class="service-num">02</span>
-              <div>
-                <p class="service-name">Website Development &amp; CMS</p>
-                <p class="service-desc">Fast, mobile-first booking sites with easy CMS</p>
-              </div>
-            </div>
-            <div class="service-item">
-              <span class="service-num">03</span>
-              <div>
-                <p class="service-name">Lead Generation via Meta Ads</p>
-                <p class="service-desc">Targeted Instagram &amp; Facebook ad campaigns</p>
-              </div>
-            </div>
-            <div class="service-item">
-              <span class="service-num">04</span>
-              <div>
-                <p class="service-name">WhatsApp Automation</p>
-                <p class="service-desc">24/7 auto-replies, brochure dispatch &amp; lead routing</p>
-              </div>
-            </div>
-            <div class="service-item">
-              <span class="service-num">05</span>
-              <div>
-                <p class="service-name">CRM Setup &amp; Sales Pipeline</p>
-                <p class="service-desc">Visual boards, follow-up alerts &amp; booking reports</p>
-              </div>
-            </div>
-          </div>
-          <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="cta-btn" id="whatsapp-cta-btn">Let's Talk →</a>
-        </div>
-      </article>
-
-      <!-- CARD 4: Contact -->
-      <article class="feed-card feed-card--contact" id="contact-card">
-        <p class="contact-heading">Let's work together</p>
-        <p class="contact-sub">Based in Gwalior, serving clients Pan-India.</p>
-        <div class="contact-actions">
-          <a href="mailto:tourismmarketier@gmail.com" class="contact-chip" id="email-chip-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-            Email
-          </a>
-          <a href="tel:+919174024621" class="contact-chip" id="call-chip-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.32 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l1-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            Call
-          </a>
-          <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="contact-chip contact-chip--wa" id="whatsapp-chip-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-            </svg>
-            WhatsApp
-          </a>
-        </div>
-      </article>
-
-    </div><!-- /cards-feed -->
-
-    <!-- BOTTOM TAB BAR -->
-    <nav class="bottom-tab-bar" aria-label="Social links">
-      <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="tab-btn" id="website-tab-btn" aria-label="Website">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="10"/>
-          <line x1="2" y1="12" x2="22" y2="12"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-      </a>
-      <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="tab-btn" id="wa-tab-btn" aria-label="WhatsApp">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-        </svg>
-      </a>
-      <a href="mailto:tourismmarketier@gmail.com" class="tab-btn" id="email-tab-btn" aria-label="Email">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-          <polyline points="22,6 12,13 2,6"/>
-        </svg>
-      </a>
-    </nav>
-
-  </div><!-- /page-shell -->
-
-  <!-- GALLERY LIGHTBOX OVERLAY -->
-  <div class="lightbox-overlay" id="gallery-lightbox" role="dialog" aria-modal="true" aria-label="Works gallery" hidden>
-    <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close gallery">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
-      </svg>
-    </button>
-    <div class="lightbox-slides" id="lightbox-slides">
-      <div class="lightbox-slide">
-        <img src="work-1.png" alt="Himalayan Trails Co. — Website & CMS" class="lightbox-img" loading="lazy" />
-        <p class="lightbox-caption">Himalayan Trails Co. — Website &amp; CMS</p>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="profile-tag">Abhay Tank — Travel Website Specialist</div>
+      <div class="avatar-row">
+        <img src="image.png" alt="Abhay Tank" class="avatar-circle" id="hero-avatar" />
       </div>
-      <div class="lightbox-slide">
-        <img src="work-2.png" alt="Azure Shores Resort — Hospitality Site" class="lightbox-img" loading="lazy" />
-        <p class="lightbox-caption">Azure Shores Resort — Hospitality Site</p>
+      <h1>I build websites<br><em>travel brands trust.</em></h1>
+      <p class="hero-desc">No bloated templates. No generic agencies. Just fast, mobile-first booking sites, targeted Meta ads, and WhatsApp automation that converts inquiries into confirmed departures.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn btn-primary" id="hero-wa-btn">💬 WhatsApp Me</a>
+        <a href="#work" class="btn btn-secondary" id="hero-work-btn">View Work</a>
       </div>
-      <div class="lightbox-slide">
-        <img src="work-3.png" alt="Wanderlust India Tours — Brand Identity" class="lightbox-img" loading="lazy" />
-        <p class="lightbox-caption">Wanderlust India Tours — Brand Identity</p>
-      </div>
-    </div>
-    <div class="lightbox-nav">
-      <button class="lightbox-prev" id="lightbox-prev-btn" aria-label="Previous">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <span class="lightbox-dots" id="lightbox-dots" aria-hidden="true"></span>
-      <button class="lightbox-next" id="lightbox-next-btn" aria-label="Next">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-  </div>
 
-  <!-- Lenis Smooth Scroll -->
+      <!-- Stats grid -->
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="stat-val">18+</div>
+          <div class="stat-label">Websites Launched</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">₹2.4L</div>
+          <div class="stat-label">OTA Commission Saved</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">10.5x</div>
+          <div class="stat-label">Average Ad ROI</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">48 hrs</div>
+          <div class="stat-label">Average Fill Speed</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2 class="section-title">Service Modules</h2>
+      <p class="section-subtitle">Modular digital growth solutions built to drive direct bookings for travel brands.</p>
+
+      <div class="services-list">
+        <div class="service-item">
+          <span class="service-num">01</span>
+          <div class="service-content">
+            <h3>Brand &amp; Identity Design</h3>
+            <p>Premium logos, PDF itineraries, social kits, and visual identities built to stop scrollers on travel feeds.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-num">02</span>
+          <div class="service-content">
+            <h3>Websites &amp; CMS</h3>
+            <p>Bespoke, mobile-first booking sites that load under 1.5 seconds — even on weak mountain 4G networks.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-num">03</span>
+          <div class="service-content">
+            <h3>Meta Lead Ads</h3>
+            <p>Targeted Instagram and Facebook campaigns funnelling qualified travel inquiries straight to WhatsApp.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-num">04</span>
+          <div class="service-content">
+            <h3>WhatsApp Automation</h3>
+            <p>24/7 auto-replies, PDF brochure dispatch, lead pre-qualification, and UPI payment triggers inside chat.</p>
+          </div>
+        </div>
+        <div class="service-item">
+          <span class="service-num">05</span>
+          <div class="service-content">
+            <h3>CRM &amp; Sales Pipeline</h3>
+            <p>Visual deal boards, follow-up alerts, and booking reports so no client inquiry ever slips through.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 1.75rem;">
+        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="btn btn-secondary btn-full" id="services-cta-btn">Discuss Your Project →</a>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK -->
+    <section id="work">
+      <h2 class="section-title">Selected Work</h2>
+      <p class="section-subtitle">Outcome-driven projects for tour operators and boutique travel brands.</p>
+
+      <div class="work-list">
+
+        <!-- Project 1 -->
+        <article class="work-card" id="work-card-1">
+          <div class="work-img-container">
+            <img src="work-1.png" alt="Himalayan Trails Co. booking website" loading="lazy" />
+          </div>
+          <div class="work-details">
+            <div class="work-brand">Himalayan Trails Co.</div>
+            <div class="work-niche">Tour Operator · Manali &amp; Spiti</div>
+            <p class="work-desc">Rebuilt their entire web presence from scratch — a lightning-fast booking site with an integrated CMS letting the team publish new packages without touching code. Organic inquiries tripled in 60 days.</p>
+            <div class="work-tags">
+              <span class="tag">Custom Website</span>
+              <span class="tag">CMS Setup</span>
+              <span class="tag">Lead Funnel</span>
+            </div>
+            <a href="#" class="work-link" id="work-link-1">Read Case Study <span>→</span></a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="work-card" id="work-card-2">
+          <div class="work-img-container">
+            <img src="work-2.png" alt="Azure Shores Resort hospitality site" loading="lazy" />
+          </div>
+          <div class="work-details">
+            <div class="work-brand">Azure Shores Resort</div>
+            <div class="work-niche">Boutique Stay · Goa Coastline</div>
+            <p class="work-desc">Engineered a direct reservation page bypassing OTA commission leaks entirely. Local SEO overhaul placed them #1 on Google Maps for three target search terms within 45 days of launch.</p>
+            <div class="work-tags">
+              <span class="tag">Hospitality Site</span>
+              <span class="tag">Local SEO</span>
+              <span class="tag">Direct Bookings</span>
+            </div>
+            <a href="#" class="work-link" id="work-link-2">Read Case Study <span>→</span></a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="work-card" id="work-card-3">
+          <div class="work-img-container">
+            <img src="work-3.png" alt="Wanderlust India Tours brand identity" loading="lazy" />
+          </div>
+          <div class="work-details">
+            <div class="work-brand">Wanderlust India Tours</div>
+            <div class="work-niche">Youth Travel · Pan-India Departures</div>
+            <p class="work-desc">Full brand identity overhaul — new logo, colour system, vertical PDF itineraries, and social media kit. Paired with hyper-targeted Meta WhatsApp campaigns that now fill weekly departures 48 hours in advance.</p>
+            <div class="work-tags">
+              <span class="tag">Brand Identity</span>
+              <span class="tag">Meta Ads</span>
+              <span class="tag">Itinerary Design</span>
+            </div>
+            <a href="#" class="work-link" id="work-link-3">Read Case Study <span>→</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <p class="section-subtitle">No long forms or corporate speak. Just drop me a message about what you're building.</p>
+
+      <div class="contact-card">
+        <a href="https://wa.me/919174024621" target="_blank" rel="noopener" class="contact-item" id="contact-wa-btn">
+          <span class="contact-icon">💬</span>
+          <div class="contact-info">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-val">+91 91740 24621</span>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="mailto:tourismmarketier@gmail.com" class="contact-item" id="contact-email-btn">
+          <span class="contact-icon">✉️</span>
+          <div class="contact-info">
+            <span class="contact-label">Email</span>
+            <span class="contact-val">tourismmarketier@gmail.com</span>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="contact-item" id="contact-site-btn">
+          <span class="contact-icon">🌐</span>
+          <div class="contact-info">
+            <span class="contact-label">Portfolio</span>
+            <span class="contact-val">tourismmarketier.com</span>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="footer-nav">
+        <a href="#services">Services</a>
+        <span>·</span>
+        <a href="#work">Work</a>
+        <span>·</span>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copyright">© 2026 Abhay Tank. All rights reserved.</p>
+      <p class="footer-motto">tourismmarketier — outcome-driven travel marketing.</p>
+    </footer>
+
+  </main>
+
   <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
-  <!-- Javascript -->
   <script src="js/main.js"></script>
 
 </body>
-
 </html>
