@@ -5,6 +5,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
   initISTClock();
+  initProjectPreviews();
 });
 
 /**
@@ -76,4 +77,21 @@ function initISTClock() {
   updateClock();
   // Update every minute (60 seconds)
   setInterval(updateClock, 60000);
+}
+
+/**
+ * Handles collapsible screenshot previews
+ */
+function initProjectPreviews() {
+  const toggles = document.querySelectorAll('.preview-toggle');
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const targetId = toggle.getAttribute('data-target');
+      const previewEl = document.getElementById(targetId);
+      if (!previewEl) return;
+
+      const isHidden = previewEl.classList.toggle('hidden');
+      toggle.textContent = isHidden ? '[view screenshot]' : '[hide screenshot]';
+    });
+  });
 }
