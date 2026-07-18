@@ -21,6 +21,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
@@ -33,129 +34,130 @@
   </script>
 </head>
 
-<body class="bg-[#fafafa] text-zinc-800 font-sans antialiased selection:bg-zinc-200 selection:text-black">
+<body class="bg-[#fafafa] dark:bg-[#0f0f11] text-zinc-800 dark:text-zinc-300 font-sans antialiased selection:bg-zinc-200 selection:text-black dark:selection:bg-zinc-800 dark:selection:text-white transition-colors duration-300">
 
   <div class="max-w-xl mx-auto px-6 py-12 sm:py-24 space-y-16">
 
     <!-- HEADER -->
-    <header class="flex justify-between items-center text-xs font-mono tracking-tight text-zinc-500">
+    <header class="flex justify-between items-center text-xs font-mono tracking-tight text-zinc-500 dark:text-zinc-400">
       <div class="flex items-center gap-2">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
         <span>Abhay Tank <span class="hidden sm:inline">/ Available</span><span class="hidden md:inline"> /
             IST</span></span>
       </div>
-      <nav class="flex gap-3">
-        <a href="#about" class="hover:text-black transition-colors">About</a>
+      <nav class="flex items-center gap-2 sm:gap-3">
+        <a href="#about" class="hover:text-black dark:hover:text-white transition-colors">About</a>
         <span>/</span>
-        <a href="#projects" class="hover:text-black transition-colors">Projects</a>
+        <a href="#projects" class="hover:text-black dark:hover:text-white transition-colors">Projects</a>
         <span>/</span>
-        <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+        <a href="#contact" class="hover:text-black dark:hover:text-white transition-colors">Contact</a>
+        <span>/</span>
+        <button id="theme-toggle" class="hover:text-black dark:hover:text-white transition-colors focus:outline-none font-mono text-[10px]" aria-label="Toggle theme">[mode: light]</button>
       </nav>
     </header>
 
     <!-- HERO -->
     <section class="space-y-4" id="about">
-      <h1 class="text-xl sm:text-2xl font-semibold text-zinc-950 tracking-tight">
+      <h1 class="text-xl sm:text-2xl font-semibold text-zinc-950 dark:text-white tracking-tight">
         High-Conversion Websites for Travel & Hospitality Brands.
       </h1>
-      <p class="text-sm text-zinc-600 leading-relaxed font-light">
-        Most web developers know code, but they don't know the travel industry. I combine my expertise in Travel &
-        Tourism with clean, modern web development to help hotels and travel agencies grow their brand direct bookings.
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
+        Most web developers know code, but they don't know the travel industry. I combine my studies in Travel & Tourism with clean, modern web development to help hotels and travel agencies grow their own direct sales.
       </p>
     </section>
 
     <!-- WHAT I DO -->
     <section class="space-y-4">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400">Core Focus</h2>
+      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Core Focus</h2>
       <div class="space-y-3 text-sm">
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 gap-1">
-          <span class="font-medium text-zinc-900">High-Converting Design</span>
-          <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Stunning Property Visuals / Seamless Booking Flow</span>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 dark:border-zinc-800 gap-1">
+          <span class="font-medium text-zinc-900 dark:text-zinc-100">High-Converting Design</span>
+          <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Stunning Property Visuals / Seamless Booking Flow</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 gap-1">
-          <span class="font-medium text-zinc-900">Mobile-First Layouts</span>
-          <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Flawless Smartphone Experience / Touch-Optimized UI</span>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 dark:border-zinc-800 gap-1">
+          <span class="font-medium text-zinc-900 dark:text-zinc-100">Mobile-First Layouts</span>
+          <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Flawless Smartphone Experience / Touch-Optimized UI</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 gap-1">
-          <span class="font-medium text-zinc-900">Lightning-Fast Tech</span>
-          <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Instant Page Loads / Pure Performance</span>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 dark:border-zinc-800 gap-1">
+          <span class="font-medium text-zinc-900 dark:text-zinc-100">Lightning-Fast Tech</span>
+          <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Instant Page Loads / Pure Performance</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 gap-1">
-          <span class="font-medium text-zinc-900">Direct Search Traffic</span>
-          <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Local Search Dominance / Zero Middleman Fees</span>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 dark:border-zinc-800 gap-1">
+          <span class="font-medium text-zinc-900 dark:text-zinc-100">Direct Search Traffic</span>
+          <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Local Search Dominance / Zero Middleman Fees</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 gap-1">
-          <span class="font-medium text-zinc-900">Custom CMS Backend</span>
-          <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Easy Package Updates / Full Content Control</span>
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-1 border-b border-zinc-100 dark:border-zinc-800 gap-1">
+          <span class="font-medium text-zinc-900 dark:text-zinc-100">Custom CMS Backend</span>
+          <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Easy Package Updates / Full Content Control</span>
         </div>
       </div>
     </section>
 
     <!-- SELECTED PROJECTS -->
     <section class="space-y-6" id="projects">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400">Selected Work</h2>
+      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Selected Work</h2>
       <div class="space-y-6">
 
         <!-- Project 1 -->
         <div class="space-y-1.5">
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 text-sm">
-            <h3 class="font-medium text-zinc-950">humsafar community</h3>
-            <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Community Portal</span>
+            <h3 class="font-medium text-zinc-950 dark:text-zinc-100">humsafar community</h3>
+            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Community Portal</span>
           </div>
-          <p class="text-xs text-zinc-500 font-light leading-relaxed">
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
             A community-focused travel booking portal organizing curated group departures and offbeat expeditions across
             India.
           </p>
           <div class="text-[11px] font-mono">
             <a href="https://humsafarcommunity.in" target="_blank" rel="noopener"
-              class="text-zinc-400 hover:text-zinc-900 transition-colors hover:underline">humsafarcommunity.in ↗</a>
+              class="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors hover:underline">humsafarcommunity.in ↗</a>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div class="space-y-1.5">
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 text-sm">
-            <h3 class="font-medium text-zinc-950">The Snow Village</h3>
-            <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Resort Web System</span>
+            <h3 class="font-medium text-zinc-950 dark:text-zinc-100">The Snow Village</h3>
+            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Resort Web System</span>
           </div>
-          <p class="text-xs text-zinc-500 font-light leading-relaxed">
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
             Custom direct-booking engine and visual redesign built for a premium retreat in Manali, increasing direct
             reservation share by 35% and cutting OTA commission leaks.
           </p>
           <div class="text-[11px] font-mono">
             <a href="https://thesnowvillage.com" target="_blank" rel="noopener"
-              class="text-zinc-400 hover:text-zinc-900 transition-colors hover:underline">thesnowvillage.com ↗</a>
+              class="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors hover:underline">thesnowvillage.com ↗</a>
           </div>
         </div>
 
         <!-- Project 3 -->
         <div class="space-y-1.5">
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 text-sm">
-            <h3 class="font-medium text-zinc-950">nomad commune</h3>
-            <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Web App</span>
+            <h3 class="font-medium text-zinc-950 dark:text-zinc-100">nomad commune</h3>
+            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Web App</span>
           </div>
-          <p class="text-xs text-zinc-500 font-light leading-relaxed">
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
             A custom web interface designed for digital nomads, integrating maps and reservation widgets for cowork &
             coliving properties.
           </p>
           <div class="text-[11px] font-mono">
             <a href="https://nomadcommune.org" target="_blank" rel="noopener"
-              class="text-zinc-400 hover:text-zinc-900 transition-colors hover:underline">nomadcommune.org ↗</a>
+              class="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors hover:underline">nomadcommune.org ↗</a>
           </div>
         </div>
 
         <!-- Project 4 -->
         <div class="space-y-1.5">
           <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 text-sm">
-            <h3 class="font-medium text-zinc-950">travel objects</h3>
-            <span class="text-[10px] sm:text-xs font-mono text-zinc-400">Logistics System</span>
+            <h3 class="font-medium text-zinc-950 dark:text-zinc-100">travel objects</h3>
+            <span class="text-[10px] sm:text-xs font-mono text-zinc-400 dark:text-zinc-500">Logistics System</span>
           </div>
-          <p class="text-xs text-zinc-500 font-light leading-relaxed">
+          <p class="text-xs text-zinc-500 dark:text-zinc-400 font-light leading-relaxed">
             Internal suppliers mapping and operational logistics dashboard helping regional destination management
             companies handle supplier networks.
           </p>
           <div class="text-[11px] font-mono">
-            <span class="text-zinc-400">travelobjects.internal (private system)</span>
+            <span class="text-zinc-400 dark:text-zinc-500">travelobjects.internal (private system)</span>
           </div>
         </div>
 
@@ -164,38 +166,40 @@
 
     <!-- CONTACT -->
     <section class="space-y-4" id="contact">
-      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400">Get in Touch</h2>
-      <p class="text-sm text-zinc-600 leading-relaxed font-light">
+      <h2 class="text-xs font-mono uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Get in Touch</h2>
+      <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed font-light">
         If you have a boutique hotel, tour agency, or travel product, let's talk about building your direct channel.
       </p>
       <div class="space-y-2 text-sm pt-2">
         <div class="flex gap-4">
-          <span class="text-zinc-400 font-mono text-xs w-16 flex-shrink-0">EMAIL</span>
+          <span class="text-zinc-400 dark:text-zinc-500 font-mono text-xs w-16 flex-shrink-0">EMAIL</span>
           <a href="mailto:tourismmarketier@gmail.com"
-            class="text-zinc-950 hover:underline break-all">tourismmarketier@gmail.com</a>
+            class="text-zinc-950 dark:text-zinc-100 hover:underline break-all">tourismmarketier@gmail.com</a>
         </div>
         <div class="flex gap-4">
-          <span class="text-zinc-400 font-mono text-xs w-16 flex-shrink-0">WHATSAPP</span>
+          <span class="text-zinc-400 dark:text-zinc-500 font-mono text-xs w-16 flex-shrink-0">WHATSAPP</span>
           <a href="https://wa.me/919174024621" target="_blank" rel="noopener"
-            class="text-zinc-950 hover:underline break-all">+91 91740 24621</a>
+            class="text-zinc-950 dark:text-zinc-100 hover:underline break-all">+91 91740 24621</a>
         </div>
         <div class="flex gap-4">
-          <span class="text-zinc-400 font-mono text-xs w-16 flex-shrink-0">HQ</span>
-          <span class="text-zinc-600">IITTM Campus, Gwalior (IN) / Remote</span>
+          <span class="text-zinc-400 dark:text-zinc-500 font-mono text-xs w-16 flex-shrink-0">HQ</span>
+          <span class="text-zinc-600 dark:text-zinc-400">IITTM Campus, Gwalior (IN) / Remote</span>
         </div>
       </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="pt-8 border-t border-zinc-100 flex justify-between items-center text-[10px] font-mono text-zinc-400">
+    <footer class="pt-8 border-t border-zinc-100 dark:border-zinc-800 flex justify-between items-center text-[10px] font-mono text-zinc-400 dark:text-zinc-500">
       <span>© 2026 Abhay Tank</span>
       <div class="flex gap-3">
-        <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="hover:text-black">website</a>
+        <a href="https://tourismmarketier.com" target="_blank" rel="noopener" class="hover:text-black dark:hover:text-white">website</a>
       </div>
     </footer>
 
   </div>
 
+  <!-- Script for Theme Toggle Interaction -->
+  <script src="js/app.js"></script>
 </body>
 
 </html>
