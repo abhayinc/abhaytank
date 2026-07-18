@@ -4,6 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   initThemeToggle();
+  initISTClock();
 });
 
 /**
@@ -45,4 +46,34 @@ function initThemeToggle() {
       updateButtons(targetTheme);
     });
   });
+}
+
+/**
+ * Live Clock that displays current time in IST (UTC+5:30)
+ */
+function initISTClock() {
+  const timeElement = document.getElementById('ist-time');
+  if (!timeElement) return;
+
+  const updateClock = () => {
+    const now = new Date();
+    // Convert current time to UTC and offset to IST (UTC+5.5)
+    const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000);
+    const istTime = new Date(utcTime + (3600000 * 5.5));
+
+    let hours = istTime.getHours();
+    const minutes = String(istTime.getMinutes()).padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+
+    // 12-hour format conversion
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    const formattedHours = String(hours).padStart(2, '0');
+
+    timeElement.textContent = `${formattedHours}:${minutes} ${ampm}`;
+  };
+
+  updateClock();
+  // Update every minute (60 seconds)
+  setInterval(updateClock, 60000);
 }
