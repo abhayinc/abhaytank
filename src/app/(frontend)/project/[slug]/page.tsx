@@ -1,7 +1,7 @@
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { client } from '../../../../sanity/lib/client'
-import { urlForImage } from '../../../../sanity/lib/image'
+import { client } from '../../../../../sanity/lib/client'
+import { urlForImage } from '../../../../../sanity/lib/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
